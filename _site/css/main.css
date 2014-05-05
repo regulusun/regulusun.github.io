@@ -101,25 +101,13 @@ a:visited { color: #a0a; }
   margin-top: 2em;
   overflow: hidden;
 }
-
-.footer .contact {
-  float: left;
-  margin-right: 3em;
+.footer .intro {
+  display: block;
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
 }
 
-.footer .contact a {
-  color: #8085C1;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
-}
 
 /*****************************************************************************/
 /*
