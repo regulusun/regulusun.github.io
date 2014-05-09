@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Allinns git flow</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">Haojianzong Dream</a></h1>
+            <a class="extra" href="/">home</a>
+            <a class="extra" href="/about">about</a>
+            <a class="extra" href="/works">works</a>
+            <a class="extra" href="/contact">contact</a>
+          </div>
+
+          <h2>Allinns git flow</h2>
+<p class="meta">09 May 2014</p>
+
+<div class="post">
+<h3>Git Flow Cheatsheet</h3>
+
+<h4>A successful git flow</h4>
+
+<p><img src="/assets/git-flow.png" alt="Git flow image"></p>
+
+<h4>Main branches:</h4>
+
+<h5>master</h5>
+
+<ol>
+<li>Head should always reflects a production-ready state.</li>
+<li>Every commit on master is a new release by definition.</li>
+<li>Commit on master must be tagged for easy future reference.
+#####develop</li>
+<li>Always reflects a state with the latest delivered development changes for the next release. (where nightly builds happen)</li>
+<li>When develop reach a steady point, merge it into master and tagged with a release number. (through a release branch)</li>
+</ol>
+
+<h4>Supporting branches</h4>
+
+<p><em>Should follow strict rules to merge from/into.</em></p>
+
+<h5>Feature branches</h5>
+
+<p>Branch off from: develop
+Merge back into: develop
+Naming convention: anything except master, develop, release-<em>, or
+hotfix-</em></p>
+
+<ol>
+<li>Weixin/manage feature in our case.</li>
+<li>Will eventually be merged back into develop or discarded.</li>
+<li>Feature branches typically exist in developer repos only, not in origin.</li>
+</ol>
+
+<p>git merge --no-ff myfeature 
+(avoid losing information about historical
+existence of a feature branch and groups together all commits that together
+added the feature.)</p>
+
+<h5>Release branches</h5>
+
+<p>May branch off from: develop
+Must merge back into: develop and master
+Branch naming convention: release-</p>
+
+<p>Release branches support preparation of a new production release.
+allow last minute bug fixes, preparing meta-data(version number, build dates).</p>
+
+<p>branch a release when develop reflects the desired state fo the new release.
+At this moment assign a versioin number.</p>
+
+<p>git checkout -b release-1.2 develop</p>
+
+<p>allow: small bug fixes, large new features strictly prohibited.</p>
+
+<h5>release branch to master branch:</h5>
+
+<p>t checkout master
+$ git merge --no-ff release-1.2
+$ ./bump-version.sh 1.2
+$ git tag -a 1.2</p>
+
+<h5>release branch to develop branch:</h5>
+
+<p>$ git checkout develop
+$ git merge --no-ff release-1.2</p>
+
+<h5>remove release branch</h5>
+
+<p>$ git branch -d release-1.2</p>
+
+<h5>Hotfix branches</h5>
+
+<p>May branch off from: master
+Must merge back into: develop and master
+Branch naming convention: hotfix-</p>
+
+<p>Like release branch but unplanned.
+The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.</p>
+
+<h5>branching</h5>
+
+<p>$ git checkout -b hotfix-1.2.1 master
+$ ./bump-version.sh 1.2
+$ git commit -a -m &quot;Bumped version number to 1.2.1&quot;
+$ git commit -m &quot;Fixed severe production problem&quot;</p>
+
+<h5>finishing</h5>
+
+<p>$ git checkout master
+$ git merge --no-ff hotfix-1.2.1
+$ git tag -a 1.2.1
+$ git checkout develop
+$ git merge --no-ff hotfix-1.2.1
+$ git branch -d hotfix-1.2.1</p>
+
+<h5>extra</h5>
+
+<p>when a release branch currently exists, the hotfix changes need to be merged
+into that release branch, instead of develop.</p>
+
+<h3>Our git flow</h3>
+
+<h3>Reference</h3>
+
+<p><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></p>
+
+</div>
+
+
+         <div class="footer">
+  <p class="intro">welcome to my blog</p>
+</div>
+
+        </div>
+
+    </body>
+</html>
