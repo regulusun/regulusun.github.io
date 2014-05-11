@@ -32,7 +32,7 @@
 
 <h3>Main branches:</h3>
 
-<p>Master and developer is what we always keep on gitlab.</p>
+<p><em>Master and developer is what we always keep on gitlab.</em></p>
 
 <h4>master</h4>
 
@@ -40,21 +40,27 @@
 <li>Head should always reflects a production-ready state.</li>
 <li>Every commit is a new release by definition.</li>
 <li>Commits must be tagged for easy future reference.</li>
-<li>Could use git hook script to automatically build and roll-out to production server when commit on master happnes.
-####develop</li>
+<li>Could use git hook script to automatically build and roll-out to production server when commit on master happnes.<br></li>
+</ol>
+
+<h4>develop</h4>
+
+<ol>
 <li>Always reflects a state with the latest delivered development changes for the next release. (where nightly builds happen)</li>
 <li>When reaches a steady point, merge it into master (by a release branch).</li>
 </ol>
 
 <h3>Supporting branches</h3>
 
-<p><strong>Should follow strict rules to merge from/into.</strong></p>
+<p><em>Should follow strict rules to merge from/into.</em></p>
 
-<h5>Feature branches</h5>
+<h4>Feature branches</h4>
 
-<p>From: develop
-Into: develop
-Naming: anything except master, develop, release-x, or hotfix-x</p>
+<p>From: develop</p>
+
+<p>Into: develop</p>
+
+<p>Naming: anything except master, develop, release-x, or hotfix-x</p>
 
 <ol>
 <li>Will be merged back into develop or discarded.</li>
@@ -62,6 +68,8 @@ Naming: anything except master, develop, release-x, or hotfix-x</p>
 <li>Example: Weixin/manage feature in our case.</li>
 <li>Remember to use --no-ff to create merge message.</li>
 </ol>
+
+<p><em>usage</em></p>
 
 <div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git checkout develop
 <span class="nv">$ </span>git merge --no-ff myfeature
@@ -72,11 +80,13 @@ Naming: anything except master, develop, release-x, or hotfix-x</p>
 <p><code>--no-ff</code>
 no fast-forwarding. Create a merge commit even when the merge resolves as a fast-forward. This is the default behaviour when merging an annotated (and possibly signed) tag.</p>
 
-<h5>Release branches</h5>
+<h4>Release branches</h4>
 
-<p>From: develop
-Into: develop and master
-Naming: release-x</p>
+<p>From: develop</p>
+
+<p>Into: develop and master</p>
+
+<p>Naming: release-x</p>
 
 <ol>
 <li>Preparation of a new production release.</li>
@@ -86,53 +96,63 @@ Naming: release-x</p>
 <li>At this moment assign a versioin number.</li>
 </ol>
 
-<h5>Creating</h5>
+<p><em>Creating</em></p>
 
-<p>$ git checkout -b release-1.2 develop
-$ ./bump-version.sh 1.2
-$ git commit -a -m &quot;Bumped version number to 1.2&quot;</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git checkout -b release-1.2 develop
+<span class="nv">$ </span>./bump-version.sh 1.2
+<span class="nv">$ </span>git commit -a -m <span class="s2">&quot;Bumped version number to 1.2&quot;</span>
+</code></pre></div>
 
-<h5>release branch to master branch:</h5>
+<p><em>release branch to master branch</em></p>
 
-<p>t checkout master
-$ git merge --no-ff release-1.2
-$ ./bump-version.sh 1.2
-$ git tag -a 1.2</p>
+<div class="highlight"><pre><code class="bash">t checkout master
+<span class="nv">$ </span>git merge --no-ff release-1.2
+<span class="nv">$ </span>./bump-version.sh 1.2
+<span class="nv">$ </span>git tag -a 1.2
+</code></pre></div>
 
-<h5>release branch to develop branch:</h5>
+<p><em>release branch to develop branch</em></p>
 
-<p>$ git checkout develop
-$ git merge --no-ff release-1.2</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git checkout develop
+<span class="nv">$ </span>git merge --no-ff release-1.2
+</code></pre></div>
 
-<h5>remove release branch</h5>
+<p><em>remove release branch</em></p>
 
-<p>$ git branch -d release-1.2</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git branch -d release-1.2
+</code></pre></div>
 
-<h5>Hotfix branches</h5>
+<h4>Hotfix branches</h4>
 
-<p>From: master
-Into: develop and master
-Naming: hotfix-x</p>
+<p>From: master</p>
+
+<p>Into: develop and master</p>
+
+<p>Naming: hotfix-x</p>
 
 <ol>
 <li>Like release branch but unplanned.</li>
 <li>The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.</li>
-<li>If a release branch currently exists, merge into release branch instead of develop.
-#####branching
-$ git checkout -b hotfix-1.2.1 master
-$ ./bump-version.sh 1.2
-$ git commit -a -m &quot;Bumped version number to 1.2.1&quot;
-$ git commit -m &quot;Fixed severe production problem&quot;</li>
+<li>If a release branch currently exists, merge into release branch instead of develop.</li>
 </ol>
 
-<h5>finishing</h5>
+<p><em>branching</em></p>
 
-<p>$ git checkout master
-$ git merge --no-ff hotfix-1.2.1
-$ git tag -a 1.2.1
-$ git checkout develop
-$ git merge --no-ff hotfix-1.2.1
-$ git branch -d hotfix-1.2.1</p>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git checkout -b hotfix-1.2.1 master
+<span class="nv">$ </span>./bump-version.sh 1.2
+<span class="nv">$ </span>git commit -a -m <span class="s2">&quot;Bumped version number to 1.2.1&quot;</span>
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;Fixed severe production problem&quot;</span>
+</code></pre></div>
+
+<p><em>finishing</em></p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>git checkout master
+<span class="nv">$ </span>git merge --no-ff hotfix-1.2.1
+<span class="nv">$ </span>git tag -a 1.2.1
+<span class="nv">$ </span>git checkout develop
+<span class="nv">$ </span>git merge --no-ff hotfix-1.2.1
+<span class="nv">$ </span>git branch -d hotfix-1.2.1
+</code></pre></div>
 
 <h3>Reference</h3>
 
