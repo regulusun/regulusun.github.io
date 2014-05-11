@@ -7,6 +7,7 @@ categories: productivity
 
 ###Surf
 [hoopchina](http://hoopchina.com)
+[youtub](http://www.youtube.com)
 [V2EX](https://www.v2ex.com)
 [quora](http://www.quora.com)
 [zhihu](http://www.zhihu.com)
