@@ -12,6 +12,9 @@ categories: productivity
 [quora](http://www.quora.com)
 [zhihu](http://www.zhihu.com)
 
+###news
+[hacker-news](https://news.ycombinator.com/)
+
 ###Tools
 [vim](http://www.vim.org/)
 [git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
