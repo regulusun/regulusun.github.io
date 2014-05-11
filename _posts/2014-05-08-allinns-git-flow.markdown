@@ -1,58 +1,62 @@
 ---
 layout: post
-title:  "Allinns git flow"
+title:  "Git Flow Keypoints"
 date:   2014-05-08 21:08:21
-categories: git
+categories: tech git
 ---
 
-###Git Flow Cheatsheet
-
-####A successful git flow
+###A successful git flow
 ![Git flow image]({{ site.url }}/assets/git-flow.png)
 
-####Main branches:
+###Main branches:
+Master and developer is what we always keep on gitlab.
 
-#####master
+####master
 1. Head should always reflects a production-ready state.
-2. Every commit on master is a new release by definition.
-3. Commit on master must be tagged for easy future reference.
-#####develop
+2. Every commit is a new release by definition.
+3. Commits must be tagged for easy future reference.
+4. Could use git hook script to automatically build and roll-out to production server when commit on master happnes.
+####develop
 1. Always reflects a state with the latest delivered development changes for the next release. (where nightly builds happen)
-2. When develop reach a steady point, merge it into master and tagged with a release number. (through a release branch)
+2. When reaches a steady point, merge it into master (by a release branch).
 
-####Supporting branches
-
-*Should follow strict rules to merge from/into.*
-
+###Supporting branches
+**Should follow strict rules to merge from/into.**
 #####Feature branches
-Branch off from: develop
-Merge back into: develop
-Naming convention: anything except master, develop, release-*, or
-hotfix-*
+From: develop
+Into: develop
+Naming: anything except master, develop, release-x, or hotfix-x
 
-1. Weixin/manage feature in our case.
-2. Will eventually be merged back into develop or discarded.
-3. Feature branches typically exist in developer repos only, not in origin.
+1. Will be merged back into develop or discarded.
+2. Feature branches typically exist in developer repos only, not in origin (not in allinns case).
+3. Example: Weixin/manage feature in our case.
+4. Remember to use --no-ff to create merge message.
 
-git merge --no-ff myfeature 
-(avoid losing information about historical
-existence of a feature branch and groups together all commits that together
-added the feature.)
+{% highlight bash %}
+$ git checkout develop
+$ git merge --no-ff myfeature
+$ git branch -d myfeature
+$ git push origin develop
+{% endhighlight %}
+
+`--no-ff`
+no fast-forwarding. Create a merge commit even when the merge resolves as a fast-forward. This is the default behaviour when merging an annotated (and possibly signed) tag.
 
 #####Release branches
-May branch off from: develop
-Must merge back into: develop and master
-Branch naming convention: release-
+From: develop
+Into: develop and master
+Naming: release-x
 
-Release branches support preparation of a new production release.
-allow last minute bug fixes, preparing meta-data(version number, build dates).
+1. Preparation of a new production release.
+2. Branch a release when develop reflects the desired state fo the new release.
+3. Allow last minute bug fixes, preparing meta-data(version number, build dates).
+4. Large new features strictly prohibited.
+5. At this moment assign a versioin number.
 
-branch a release when develop reflects the desired state fo the new release.
-At this moment assign a versioin number.
-
-git checkout -b release-1.2 develop
-
-allow: small bug fixes, large new features strictly prohibited.
+#####Creating
+$ git checkout -b release-1.2 develop
+$ ./bump-version.sh 1.2
+$ git commit -a -m "Bumped version number to 1.2"
 
 #####release branch to master branch:
 t checkout master
@@ -66,13 +70,13 @@ $ git merge --no-ff release-1.2
 $ git branch -d release-1.2
 
 #####Hotfix branches
-May branch off from: master
-Must merge back into: develop and master
-Branch naming convention: hotfix-
+From: master
+Into: develop and master
+Naming: hotfix-x
 
-
-Like release branch but unplanned.
-The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.
+1. Like release branch but unplanned.
+2. The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.
+3. If a release branch currently exists, merge into release branch instead of develop.
 #####branching
 $ git checkout -b hotfix-1.2.1 master
 $ ./bump-version.sh 1.2
@@ -86,13 +90,6 @@ $ git tag -a 1.2.1
 $ git checkout develop
 $ git merge --no-ff hotfix-1.2.1
 $ git branch -d hotfix-1.2.1
-
-#####extra
-when a release branch currently exists, the hotfix changes need to be merged
-into that release branch, instead of develop.
-
-
-###Our git flow
 
 ###Reference
 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
