@@ -174,7 +174,11 @@ a:visited { color: #a0a; }
 /*****************************************************************************/
 
 /* start page */
-.start-page a {
-  display: inline-block;
+.start_page a, a:visited {
   margin-left: 15px;
+  text-decoration: none;
+  color: #a00;
+}
+.start_page a:hover {
+  color: black;
 }

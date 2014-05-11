@@ -1,0 +1,18 @@
+---
+layout: start
+title:  "Start"
+date:   2014-05-10 17:08:21
+categories: productivity
+---
+
+###Surf
+[hoopchina](http://hoopchina.com)
+[V2EX](https://www.v2ex.com)
+[quora](http://www.quora.com)
+[zhihu](http://www.zhihu.com)
+
+###Tools
+[vim](http://www.vim.org/)
+[git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
+
+###Misc
