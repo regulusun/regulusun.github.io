@@ -165,3 +165,16 @@ a:visited { color: #a0a; }
 .post pre.terminal code {
   background-color: #333;
 }
+
+
+/*****************************************************************************/
+/*
+/* Pages
+/*
+/*****************************************************************************/
+
+/* start page */
+.start-page a {
+  display: inline-block;
+  margin-left: 15px;
+}
