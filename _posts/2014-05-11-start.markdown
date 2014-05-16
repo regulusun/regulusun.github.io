@@ -5,12 +5,13 @@ date:   2014-05-10 17:08:21
 categories: productivity
 ---
 
-###Surf
+###Fun
 [hoopchina](http://hoopchina.com)
 [youtub](http://www.youtube.com)
 [V2EX](https://www.v2ex.com)
 [quora](http://www.quora.com)
 [zhihu](http://www.zhihu.com)
+[NBA](http://www.nba.com)
 
 ###news
 [hacker-news](https://news.ycombinator.com/)
