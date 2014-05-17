@@ -20,4 +20,7 @@ categories: productivity
 [vim](http://www.vim.org/)
 [git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
 
+###Learn
+[vbird linux](http://linux.vbird.org/)
+
 ###Misc
