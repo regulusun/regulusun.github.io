@@ -13,7 +13,7 @@ categories: productivity
 [zhihu](http://www.zhihu.com)
 [NBA](http://www.nba.com)
 
-###news
+###News
 [hacker-news](https://news.ycombinator.com/)
 
 ###Tools
@@ -21,6 +21,9 @@ categories: productivity
 [git-flow](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ###Learn
-[vbird linux](http://linux.vbird.org/)
+[vbird-linux](http://linux.vbird.org/)
+
+###CheatSheets
+[ruby-quick-ref](http://www.zenspider.com/Languages/Ruby/QuickRef.html)
 
 ###Misc
