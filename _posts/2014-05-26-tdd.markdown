@@ -1,0 +1,38 @@
+---
+layout: post
+title:  "Using Markdown"
+date:   2014-05-26 9:55:21
+categories: coding tdd
+---
+
+TDD: the definition
+===================
+*Wikipedia*
+Test-driven development (TDD) is a software development process that relies on
+the repetition of a very short development cycle: first the developer writes
+an (initially failing) automated test case that defines a desired improvement
+or new function, then produces the minimum amount of code to pass that test,
+and finally refactors the new code to acceptable standards.
+
+*agileskillsproject.org*
+Test-Driven Development (TDD) is a way of driving the design of code by
+writing a test which expresses what you intend the code to do, making that
+test pass, and continuously refactoring to keep the design as simple as
+possible. TDD can apply at multiple levels, e.g., Customer Tests, Integration
+Tests, Unit Tests.
+Test-Driven Development/Design follows a rigorous cycle. Start by writing a
+failing test (Red.) Implement the simplest solution that will cause the test
+to pass (Green.) Search for duplication and remove it (Refactor.)
+"RED-GREEN-REFACTOR" has become almost a mantra for many TDD practitioners.
+Understanding and even internalizing this cycle is key to being able to use
+TDD to solve problems.
+
+Benefits
+========
+1. Avoid procrastination;
+
+
+Reference
+=========
+[wikipedia: tdd](http://en.wikipedia.org/wiki/Test-driven_development)
+[TDD in Rails](http://edapx.com/2013/01/12/tdd-in-rails/)
