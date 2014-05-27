@@ -57,8 +57,7 @@ Learning By Teaching
 2. Answering stackoverflow open questions;
 3. Topic sharings;
 
-Developing a good habit is not about checking this list one by one, but
-persistently remind yourself to refine your skill.
+Help me improve this page if you have better ideas.
 
 Reference
 =========
