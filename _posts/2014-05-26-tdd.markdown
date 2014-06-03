@@ -5,8 +5,6 @@ date:   2014-05-26 9:55:21
 categories: coding tdd
 ---
 
-Coding like a boss, it's all about good programming habits, let's see how we can improve. 
-
 Start TDD
 =========
 
@@ -37,6 +35,8 @@ TDD to solve problems.
 
 2. Get start and a lot of resources: [TDD in Rails](http://edapx.com/2013/01/12/tdd-in-rails/)
 
+*is Tdd dead?*(http://www.justinweiss.com/blog/2014/04/28/post-railsconf-should-i-still-learn-tdd/)
+
 Best Practices
 ==============
 1. Search online for best practices as soon as you have programming in a language
@@ -56,8 +56,6 @@ Learning By Teaching
 1. Contributing on github projects;
 2. Answering stackoverflow open questions;
 3. Topic sharings;
-
-Help me improve this page if you have better ideas.
 
 Reference
 =========
