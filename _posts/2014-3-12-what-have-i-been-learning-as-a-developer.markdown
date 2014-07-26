@@ -14,7 +14,7 @@ Looks at the fun stuff I have been learning since I switched my career:
 2. HTML+CSS+jQuery: Make my own website on my own, getting better on it.
 RubyOnRails: Just get start working on it this week, backend server stuff is all new and fun to me.
 3. iOS App Development: making and running App on my iPhone is satisfying.
-Algorithm: math stuff is not actually fun, but using math to solve real life problem is cool.
-3. Writing: a good developer should write well.
+4. Algorithm: math stuff is not actually fun, but using math to solve real life problem is cool.
+5. Writing: a good developer should write well.
 
 Yeah, I better get back to studying now.
