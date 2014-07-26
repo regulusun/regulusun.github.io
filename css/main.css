@@ -41,6 +41,9 @@ a:visited { color: #a0a; }
 /* Home
 /*
 /*****************************************************************************/
+.intro p {
+  margin: 0;
+}
 .posts {
   list-style-type: none;
   margin-bottom: 2em;
