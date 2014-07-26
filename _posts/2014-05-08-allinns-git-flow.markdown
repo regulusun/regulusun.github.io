@@ -6,7 +6,7 @@ categories: tech git
 ---
 
 ###A successful git flow
-![Git flow image]({{ site.url }}/assets/git-flow.png)
+![Git flow image]({{ site.url }}/images/git-flow.png)
 
 ###Main branches:
 _Master and developer is what we always keep on gitlab._

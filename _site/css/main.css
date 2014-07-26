@@ -75,9 +75,13 @@ a:visited { color: #a0a; }
   text-decoration: none;
 }
 
+.avatar {
+  width: 35px;
+  height: auto;
+}
+
 .title {
   display: inline-block;
-  margin-bottom: 2em;
 }
 
 .title a {
