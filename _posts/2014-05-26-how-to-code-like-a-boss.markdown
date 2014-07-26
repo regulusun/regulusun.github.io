@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How To Code Like A Boss"
+title:  "How To Code Like A Boss - A Coder's Level Up Pack"
 date:   2014-05-26 9:55:21
 categories: coding tdd
 ---
