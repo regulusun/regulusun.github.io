@@ -35,7 +35,7 @@ TDD to solve problems.
 
 2. Get start and a lot of resources: [TDD in Rails](http://edapx.com/2013/01/12/tdd-in-rails/)
 
-*is Tdd dead?*(http://www.justinweiss.com/blog/2014/04/28/post-railsconf-should-i-still-learn-tdd/)
+[is Tdd dead?](http://www.justinweiss.com/blog/2014/04/28/post-railsconf-should-i-still-learn-tdd/)
 
 Best Practices
 ==============
