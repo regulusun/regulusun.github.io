@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Have More Posts Then Qurality Posts"
+title: "I Have More Blogs Then Posts"
 categories: blog tech
 ---
 
