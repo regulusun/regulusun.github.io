@@ -16,6 +16,9 @@ A collection of best practices/blog posts/references of mine.
 ### Ruby
 1. [AwesomeRuby](https://github.com/markets/awesome-ruby)
 
+### iOS
+1. [2014 WWDC Videos](https://developer.apple.com/videos/wwdc/2014/)
+
 ### Git
 *Notes*
 1. Only do one thing for one commit;
