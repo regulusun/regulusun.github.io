@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Have More Blogs Then Posts"
+title: "I Have More Blogs Than Posts"
 categories: blog tech
 ---
 

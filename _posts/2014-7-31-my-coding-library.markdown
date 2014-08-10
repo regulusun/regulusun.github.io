@@ -19,6 +19,8 @@ A collection of best practices/blog posts/references of mine.
 ### iOS
 1. [2014 WWDC Videos](https://developer.apple.com/videos/wwdc/2014/)
 2. [Awesome iOS](https://github.com/vsouza/awesome-ios): a collection of iOS resources.
+3. [core-data-one-line-fetch](http://www.cocoawithlove.com/2008/03/core-data-one-line-fetch.html)
+4. [process-of-writing-ios-application](http://www.cocoawithlove.com/2011/06/process-of-writing-ios-application.html): valuable article about how an iOS app was made from sketch.
 
 ### Git
 *Notes*
