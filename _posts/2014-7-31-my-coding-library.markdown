@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My Coding Libirary"
+title:  "Awesome Programming - My Coding Libirary"
 date:   2014-05-08 21:08:21
 categories: coding
 ---
@@ -18,6 +18,7 @@ A collection of best practices/blog posts/references of mine.
 
 ### iOS
 1. [2014 WWDC Videos](https://developer.apple.com/videos/wwdc/2014/)
+2. [Awesome iOS](https://github.com/vsouza/awesome-ios): a collection of iOS resources.
 
 ### Git
 *Notes*
