@@ -91,7 +91,7 @@ img.img-center {
   font-size: 13px;
   color: #262236;
   background-color: white;
-  border-bottom: 1px solid #eee;
+  margin: 40px 0 10px 0;
 }
 .sp-item-title {
   margin: 0 0 5px 0;
@@ -117,6 +117,10 @@ img.img-center {
   float: left;
   width: 80px;
   height: 80px;
+}
+.sp-item-seperator {
+  background-color: #eee;
+  height: 1px;
 }
 /*****************************************************************************/
 /*
