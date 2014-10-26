@@ -81,6 +81,45 @@ img.img-center {
 
 /*****************************************************************************/
 /*
+/* Items
+/*
+/*****************************************************************************/
+#sell>h2 {
+  margin: 25px 0;
+}
+.sp-item {
+  font-size: 13px;
+  color: #262236;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+}
+.sp-item-title {
+  margin: 0 0 5px 0;
+}
+.sp-item-imgs-grp {
+  width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sp-item-label-row {
+  margin-bottom: 10px;
+}
+.sp-item-label-price {
+  background-color: #444 !important;
+}
+.sp-item-label-new {
+  background-color: #A5B0C3 !important;
+}
+.sp-item-label-date {
+  color: #A5B0C3;
+}
+.sp-item-imgs-grp img {
+  float: left;
+  width: 80px;
+  height: 80px;
+}
+/*****************************************************************************/
+/*
 /* Site
 /*
 /*****************************************************************************/
