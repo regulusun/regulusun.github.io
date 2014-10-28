@@ -10,13 +10,19 @@ static final int LOGICAL_DELETION = 1 << 0
 {% endhighlight %}
 
 这里定义了一个全局变量LOGICAL_DELETION，用来标记记录的逻辑删除。
-<< 是二进制运算符，表示移位。譬如1 << 1，在8位(8 bits)二进制中表示即是：
+
+<< 是二进制左移位运算符。譬如1 << 1，在8位(8 bits)二进制中表示即是：
+
+```
 1表示：00000001
 1 << 1运算后得到: 00000010
+```
 
 使用二进制算法来计算一个储存为int的常量，有什么作用呢？
 
-假如要表示一些数据的状态，简单的做法是创建变量并赋值为int类型：
+我平时习惯使用int整形表示状态值。
+
+假如要表示一些数据的状态，则创建变量并赋值为int类型：
 
 {% highlight objective-c %}
 typedef NS_ENUM(NSInteger, UITableViewCellStyle) {
@@ -27,10 +33,11 @@ typedef NS_ENUM(NSInteger, UITableViewCellStyle) {
 };
 {% endhighlight objective-c %}
 
-在这里我们使用0, 1, 2, 3来标记UITableViewCellStyle。
+但是采取像上面这样的int类型来记录状态，如果要表示同时具备UITableViewCellStyle1和UITableViewCellStyle2的状态，就需要写下面这样的判断：
 
-但是采取像上面这样的int类型来记录状态，如果要表示同时具备UITableViewCellStyle1和UITableViewCellStyle2的状态，就需要下面这样的判断：
+```
 (style == UITableViewCellStyle1 || style == UITableViewCellStyle2 )
+```
 
 如果使用二进制表示状态，上面的代码可以写成：
 
@@ -45,18 +52,16 @@ typedef NS_ENUM(NSInteger, UITableViewCellStyle) {
 
 使用 << 移位预算符计算后，每一个状态在二进制运算中代表一位。
 
-如果要表示UITableViewCellStyle1及UITableViewCellStyle2，则可使用|(OR)运算符，表示为00000011。
+这时候，如果要表示UITableViewCellStyle1及UITableViewCellStyle2，则可使用|(OR)运算符，表示为00000011。而检查style = 00000001 是否在上述两种状态中，则可以使用&(AND)运算符来做判断：
 
-检查style = 00000001 是否在上述状态中，则可以使用&(AND)运算符，
-
-{% highlight objective-c %}
+```
 00000001 (style)
 00000011 (UITableViewCellStyle1及UITableViewCellStyle2)
---------
+-------- (&)
 00000001 (result)
-{% endhighlight objective-c %}
+```
 
-result != 0 ，style就存在上述状态中，如果result == 0，则style不存在上述状态中。
+如果result != 0的话，style就存在上述状态中，如果result == 0，则style不存在上述状态中。
 
 使用这种方法，就不需要像上面使用int整型表示状态时，写两个逻辑判断。
 
