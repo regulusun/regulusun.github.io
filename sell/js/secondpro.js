@@ -8,7 +8,7 @@ var items = [
   desc: "最近换了rmbp，所以出这部自用开发机。2010年港行，功能无损、外观成色垃圾，机器右侧很久之前曾经摔了一个坑出来。已经加装了128GB的镁光ssd，与原来的256GBSATA硬盘共同使用。"}, 
 { name: "kindle",
   title: "Kindle 3 送官方带灯皮套", 
-  price: "199.00",
+  price: "250.00",
   original_price: "800.00",
   new: "六成新",
   date: "2014-11-4",
