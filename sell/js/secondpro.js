@@ -1,11 +1,4 @@
 var items = [ 
-{ name: "macbook",
-  title: "Macbook Pro 13寸 MC374", 
-  price: "已出",
-  original_price: "8500.00",
-  new: "七成新",
-  date: "2014-11-4",
-  desc: "最近换了rmbp，所以出这部自用开发机。2010年港行，功能无损、外观成色垃圾，机器右侧很久之前曾经摔了一个坑出来。已经加装了128GB的镁光ssd，与原来的256GBSATA硬盘共同使用。"}, 
 { name: "atx750",
   title: "捷安特atx750山地变速自行车", 
   price: "800.00",
@@ -20,6 +13,13 @@ var items = [
   new: "七成新",
   date: "2014-11-4",
   desc: "在专卖店买来骑行海南后，就没怎么出过远门了，Q叉前后避震。轻量改装了刹把、脚踏，安装了超级实用的泥档。仅限广州面交。"}, 
+{ name: "macbook",
+  title: "Macbook Pro 13寸 MC374", 
+  price: "已出",
+  original_price: "8500.00",
+  new: "七成新",
+  date: "2014-11-4",
+  desc: "最近换了rmbp，所以出这部自用开发机。2010年港行，功能无损、外观成色垃圾，机器右侧很久之前曾经摔了一个坑出来。已经加装了128GB的镁光ssd，与原来的256GBSATA硬盘共同使用。"}, 
 ]
 
 
