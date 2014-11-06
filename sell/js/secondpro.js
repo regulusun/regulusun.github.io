@@ -19,10 +19,11 @@ var items = [
   original_price: "8500.00",
   new: "七成新",
   date: "2014-11-4",
-  desc: "最近换了rmbp，所以出这部自用开发机。2010年港行，功能无损、外观成色垃圾，机器右侧很久之前曾经摔了一个坑出来。已经加装了128GB的镁光ssd，与原来的256GBSATA硬盘共同使用。"}, 
+  desc: "最近换了rmbp，所以出这部自用开发机。2010年港行，功能无损、外观成色垃圾，机器右侧很久之前曾经摔了一个坑出来。已经加装了128GB的镁光ssd，与原来的256GBSATA硬盘共同使用。"}
 ]
 
 
+// draft items
 // { name: "kindle",
   //title: "Kindle 4 送官方带灯皮套", 
   //price: "250.00",
@@ -30,12 +31,13 @@ var items = [
   //new: "六成新",
   //date: "2014-11-4",
   //desc: "3年前购于美国亚马逊，附带原装皮套，皮套可以直接使用kindle的电池照明。看得少的话，一般1个月充一次电，每天看的话可能2-3周充一次电。功能完好，看英语书的绝配。"}, 
-//$(function() {
-    //for ( i = 0; i< items.length; i++) {
-        //renderItem(items[i]);
-    //}
-    //$("#loading").hide();
-//});
+  
+$(function() {
+    for ( i = 0; i< items.length; i++) {
+        renderItem(items[i]);
+    }
+    $("#loading").hide();
+});
 
 function renderItem(itemJson) {
     var template = $('#itemTemplate').html();
