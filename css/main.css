@@ -97,7 +97,7 @@ img.img-center {
   margin: 0 0 5px 0;
 }
 .sp-item-imgs-grp {
-  width: 160px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -115,8 +115,7 @@ img.img-center {
 }
 .sp-item-imgs-grp img {
   float: left;
-  width: 80px;
-  height: 80px;
+  width: 50%;
 }
 .sp-item-seperator {
   background-color: #eee;
@@ -131,7 +130,8 @@ img.img-center {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
+  width: 90%;
+  max-width: 600px;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
