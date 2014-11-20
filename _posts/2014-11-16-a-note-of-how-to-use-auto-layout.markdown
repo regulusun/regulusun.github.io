@@ -9,7 +9,19 @@ There are three sections in the WWDC 2012 describing how to work with Auto Layou
 I take the these notes to remind myself about some of the most useful points that I learned in making the Klook ios app.
 
 ## Tips
-1. Think of Auto Layout declaratively
+1. Think of Auto layout declaratively.
+2. A auto layout constraint describes a relation between two views: item1.attribute = multiplier * item2.attribute + constant.
+3. In a custom view you have full control over the layout of its subviews.
+4. Priority = 1000 means required.
+
+## Layout Process
+1. First step: *updating constraints*, happens bottom-up. Triggered by calling [view setNeedsUpdateConstraints], override [view updateConstraints] for custom views. This step solves constraints.
+2. Second step: *Layout*, happens top-down. Triggered by calling [view setNeedsLayout], [view layoutIfNeeded], override [view layoutSubviews] for custom views. When layoutSubviews get called, we have frames (for subviews?).
+3. Third step: *display*, happens top-down. Triggered by calling [view setNeedsDisplay], override [view drawRect:] for custom views.
+
+## Local Constraints
+1. Implementing requiresConstraintBasedLayout to return YES.
+2. The place to add local constraints is updateConstraints. Make sure to invoke [super updateConstraints] in your implementation after you’ve added whatever constraints you need to lay out the subviews.
 
 ## Debugging
 Auto Layout can have two kinds of problem, ambiguous constraints and unsatisfiable constraints.
@@ -28,6 +40,7 @@ Auto Layout can have two kinds of problem, ambiguous constraints and unsatisfiab
         * check if translatesAutoresizingMaskIntoConstraints is set to NO; 
         * name views in storyboard using identifier. 
     * [view constraintsAffectingLayoutForAxis:]
+    * Pause your app then po [[UIWindow keyWindow] \_autolayoutTrace].
 
 ## Animation:
 * [view layoutIfNeeded]
