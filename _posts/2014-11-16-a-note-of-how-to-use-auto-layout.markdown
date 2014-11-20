@@ -43,7 +43,11 @@ Auto Layout can have two kinds of problem, ambiguous constraints and unsatisfiab
     * Pause your app then po [[UIWindow keyWindow] \_autolayoutTrace].
 
 ## Animation:
+* Two strategies:
+    * Changing constraints to recalculate frames and use Core Animation to interpolate between the old and the new postion. Violates constraints temporarily. Can animate removing/adding constraints.
+    * Directly animating the constraints themselves. Very slow. Only animate constant.
 * [view layoutIfNeeded]
+* Don't set frames yourself.
 
 ## Custom UIView:
 * override the following UIView methods:
