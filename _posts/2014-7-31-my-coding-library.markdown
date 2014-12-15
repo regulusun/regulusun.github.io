@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Awesome Programming - My Coding Libirary"
+title:  "My Coding Library - A Collection of Useful Development Tools"
 date:   2014-05-08 21:08:21
 categories: coding
 ---
 
-A collection of best practices/blog posts/references of mine.
+A collection of best practices/blog posts/references of mine, keep updating.
 
 ### Code Standards
 1. [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
