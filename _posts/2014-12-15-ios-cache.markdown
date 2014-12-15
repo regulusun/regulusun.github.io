@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "一个iOS Client-Server App的缓存策略"
+title:  "一个iOS App的缓存策略"
 date:   2014-12-03 21:08:21
 categories: coding ios
 ---
