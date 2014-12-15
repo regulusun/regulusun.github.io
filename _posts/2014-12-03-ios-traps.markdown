@@ -5,6 +5,8 @@ date:   2014-12-03 21:08:21
 categories: coding
 ---
 
+这里收集一些我在iOS开发中经常遇到的陷阱。
+
 ## Storyboard
 * 如果使用的instantiateViewControllerWithIdentifier，storyboard view controller的size设置不能为infer，因为没有segue连接，所以此时view controller的大小不能由上级view controller决定，会导致autolayout报错。
 
