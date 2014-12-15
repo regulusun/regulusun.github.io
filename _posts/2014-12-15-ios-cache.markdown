@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "一个iOS Client-Server App的缓存策略"
+date:   2014-12-03 21:08:21
+categories: coding ios
+---
+
+此前，我在V2EX上请教"[iOS app REST api缓存方案][1]"，现实中也请教过一些朋友，发现不少人都遇到同样的问题。在网上搜索最佳实践的时候，也没有找到比较满意的解决方案，所以在这里总结一下我的经验。
+
+现在很多iOS
+App都是采取Client-Server这种架构，App端的数据都是从服务器获取的。我现在设计的App，考虑到一方面打开App的时候一片空白不太好看，另一方面需要在用户离线的情况下也能查看他的使用券，所以在一开始的时候，就需要研究缓存策略的问题。
+
+经过google后，我发觉有以下几种缓存方案：
+
+1. 自己手写保存、读取core data
+2. 使用restKit(https://github.com/RestKit/RestKit)
+3. AFIncrementalStore
+4. 利用iOS的api，NSURLCache
+
+这几种google出来的方案，因为我自己也不是很了解，所以当时也不敢下判断哪种更好，毕竟一旦开始coding，再改回来，就要耗费不少功夫。
+
+后来，V2EX上，yellowV2ex回答了我的问题
+
+> 我是把网址和参数组成一个key，然后把读到的内容value存进去，读的时候先读上次缓存的结果，同步读取网络，如果有不同则立即更新界面，因为是统一接口，所以全局网络读取都自动有了缓存机制。
+
+这种办法可以一次过缓存所有的请求，解决了没有网络时，打开App没任何内容的问题。但是，才去这种办法的话，很有可能服务器的数据已经改变了，而App还在显示旧的数据。
+
+跟着这个思路，后来我读到一篇关于Restful client api设计的文章，里面讨论到缓存的两种模式，Expiration model和Validation
+model，我才豁然开朗，因为资源储存在服务器端，必须要由服务器端来决定缓存策略。客户端要做的事情，仅是利用服务端返回的cache-control header，来实现缓存。
+
+如果有兴趣建立良好的Restful api，建议阅读[这篇文章][2]。
+
+总结一下最后我的解决方案：
+
+客户端使用AFNetworking，并通过自定义NSCache实现缓存。缓存资源的策略，由服务器通过cache-control header来决定。需要注意的是，iOS客户端要调用NSCache，服务器必须返回cache-control header。
+
+另外，对于我现在开发的Klook iOS App来说，最重要的莫过于大量图片资源的缓存。因为我现在做的App使用七牛作为CDN，七牛返回的请求已经配置了cache-control header，所以ios端我使用UIImageView + AFNetworking，图片就自动实现缓存了。
+
+[1]: http://v2ex.com/t/144736
+[2]: http://blog.mugunthkumar.com/articles/restful-api-server-doing-it-the-right-way-part-1/
