@@ -35,3 +35,7 @@ A collection of best practices/blog posts/references of mine, keep updating.
 
 ### GTD(Get Things Done)
 1. [trello](www.trello.com) to collaborte.
+
+### Blog
+1. [nickbradbury](http://nickbradbury.com/)
+2. [oliveremberton](http://oliveremberton.com/)
