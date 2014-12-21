@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Note Of Auto Layout"
+title:  "A Note On Using Auto Layout"
 date:   2014-11-16 16:08:21
 categories: tech ios
 ---
@@ -60,6 +60,11 @@ Auto Layout can have two kinds of problems, ambiguous constraints and unsatisfia
     * frameForAlignmentRect: 
     * alignmentRectInsets:
     * baselineOffsetFromBottom
+
+## Third Party Tools
+* [Masonry-iOS](https://github.com/Masonry/Masonry): Masonry is a light-weight
+  layout framework which wraps AutoLayout with a nicer syntax. Anything
+  NSLayoutConstraint can do, Masonry can do too.
 
 [1]: https://developer.apple.com/videos/wwdc/2012/?id=202
 [2]: https://developer.apple.com/videos/wwdc/2012/?id=228
