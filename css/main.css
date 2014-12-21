@@ -32,9 +32,12 @@ h6 { font-size: .75em; }
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
+a         { color: #00a; text-decoration: none; }
 a:hover   { color: #000; }
 a:visited { color: #a0a; }
+
+ul { margin: 8px 0 8px 16px; }
+li { margin-bottom: 8px; }
 
 /*****************************************************************************/
 /*
@@ -60,11 +63,11 @@ img.img-center {
 }
 .posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin: 0 0 2em 0;
 }
 
 .posts li {
-  line-height: 1.75em;
+  margin-bottom: 3px;
 }
 
 .posts span {
@@ -135,9 +138,11 @@ img.img-center {
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
+.header { margin-bottom: 30px; }
 
 .header h1 {
   font-size: 25px;
+  margin: 0;
 }
 
 .header img {
@@ -152,6 +157,8 @@ img.img-center {
 .avatar {
   width: 35px;
   height: auto;
+  position: relative;
+  top: -3px;
 }
 
 .title {
@@ -177,13 +184,15 @@ img.img-center {
 
 .meta {
   color: #aaa;
+  text-align: right;
+  margin: 40px 0;
 }
 
 .footer {
   font-size: 80%;
   color: #666;
   border-top: 4px solid #eee;
-  margin-top: 6em;
+  margin-top: 3em;
   overflow: hidden;
 }
 
