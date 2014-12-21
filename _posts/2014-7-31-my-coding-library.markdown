@@ -1,38 +1,38 @@
 ---
 layout: post
-title:  "My Coding Library - A Collection of Useful Development Tools"
-date:   2014-05-08 21:08:21
+title:  "My Coding Library - My Collection of Development Resources"
 categories: coding
 ---
 
 A collection of best practices/blog posts/references of mine, keep updating.
 
 ### Code Standards
-1. [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
+* [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
 
 ### Web Development
-1. [jQuery BestPractices](http://gregfranko.com/jquery-best-practices/#/13)
-1. [AwesomeRuby](https://github.com/markets/awesome-ruby)
-1. [Introduction to HTTP](http://www.gotealeaf.com/books/http)
+* [jQuery BestPractices](http://gregfranko.com/jquery-best-practices/#/13)
+* [AwesomeRuby](https://github.com/markets/awesome-ruby)
+* [Introduction to HTTP](http://www.gotealeaf.com/books/http)
 
 ### iOS
-1. [2014 WWDC Videos](https://developer.apple.com/videos/wwdc/2014/)
-2. [Awesome iOS](https://github.com/vsouza/awesome-ios): a collection of iOS resources.
-3. [core-data-one-line-fetch](http://www.cocoawithlove.com/2008/03/core-data-one-line-fetch.html)
-4. [process-of-writing-ios-application](http://www.cocoawithlove.com/2011/06/process-of-writing-ios-application.html): valuable article about how an iOS app was made from sketch.
+* [objc](http://www.objc.io/): A periodical about best practices and advanced
+   techniques for iOS and OS X development.
+* [2014 WWDC Videos](https://developer.apple.com/videos/wwdc/2014/)
+* [Awesome iOS](https://github.com/vsouza/awesome-ios): a collection of iOS resources.
+* [core-data-one-line-fetch](http://www.cocoawithlove.com/2008/03/core-data-one-line-fetch.html)
+* [process-of-writing-ios-application](http://www.cocoawithlove.com/2011/06/process-of-writing-ios-application.html): valuable article about how an iOS app was made from sketch.
 
 ### Git
-*Notes*
-1. Only do one thing for one commit;
-2. Write commit message as clearly as possible;
-3. ALWAYS review before commit (use commit -v);
-
-1. [Git for beginners: The definitive practical guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
-2. [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
+* Tips
+  * Only do one thing for one commit;
+  * Write commit message as clearly as possible;
+  * ALWAYS review before commit (use commit -v);
+* [Git for beginners: The definitive practical guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
+* [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ### GTD(Get Things Done)
-1. [trello](www.trello.com) to collaborte.
+* [trello](www.trello.com) to collaborte.
 
 ### Hacker Blogs
-1. [nickbradbury](http://nickbradbury.com/)
+* [nickbradbury](http://nickbradbury.com/)
 2. [oliveremberton](http://oliveremberton.com/)
