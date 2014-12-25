@@ -12,3 +12,4 @@ categories: coding
 
 ## Auto layout
 * 在getter里面初始化元素时，如果指定了view的frame为parent view 的bounds，有可能在第一次get这个元素的时候，parent view并未layout为正确的大小。应该在updateConstraints方法里面，重新设置元素的frame（此时parent view已经正确布局）。当然，更好的办法，是统一使用Constraint来定位，在updateConstraints里面设置需要布局元素的layout constraints.
+* Animation: Make sure you are calling and animating layoutIfNeeded of the topmost superview.
