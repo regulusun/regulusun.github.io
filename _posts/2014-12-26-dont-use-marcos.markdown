@@ -26,8 +26,11 @@ categories: coding ios
 仔细看一下，这里用到C的两个声明变量的keyword，static和const：
 
 > static: 
+
 > 1. A static variable inside a function keeps its value between invocations.
+
 > 2. A static global variable or a function is "seen" only in the file it's declared in
+
 
 > const: 
 > The compiler won't allow something declared as const to be modified.
