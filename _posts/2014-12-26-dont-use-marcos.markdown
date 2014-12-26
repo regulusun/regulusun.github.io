@@ -35,7 +35,10 @@ categories: coding ios
 
 
 参考：
+
 1. [“static const” vs “#define” in C](http://stackoverflow.com/questions/1674032/static-const-vs-define-in-c)
+
 2. [What does “static” mean in a C program?](http://stackoverflow.com/questions/572547/what-does-static-mean-in-a-c-program)
+
 3. [Does “const” just mean read-only or something more? ](http://stackoverflow.com/questions/4486326/does-const-just-mean-read-only-or-something-more-in-c-c)
 
