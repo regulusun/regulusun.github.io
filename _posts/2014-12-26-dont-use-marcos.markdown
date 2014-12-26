@@ -15,6 +15,7 @@ categories: coding ios
 
 1. 没有声明变量类型
 1. 没有限定常量范围
+1. 在xcode里面marco的屎黄色很难看
 
 所以最好使用下面这种方式来声明常量：
     
