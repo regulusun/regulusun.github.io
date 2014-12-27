@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "My Coding Library"
 date: "2014-12-27"
 categories: coding
@@ -31,13 +31,13 @@ Coding resources that worth keeping.
 * [Git for beginners: The definitive practical guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
 * [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
 
-### GTD(Get Things Done)
+### Productivity
 * [trello](www.trello.com) to collaborte.
 
-### Hacker Blogs
+### Hacker Blog
 * [Nickbradbury](http://nickbradbury.com/)
 * [Oliver Emberton](http://oliveremberton.com/)
 * [Paul Graham](http://paulgraham.com/)
 
-## Job
+### Career
 1. [How to write a Developer CV/Résumé that will get you hired](http://www.slideshare.net/perlcareers/how-to-write-a-developer-cvrsum-that-will-get-you-hired)
