@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My Coding Library - My Collection of Development Resources"
+title:  "My Coding Library"
 categories: coding
 ---
 

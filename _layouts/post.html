@@ -1,12 +1,11 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-
 <div class="post start_page">
+<h2 class="post_title">{{ page.title }}</h2>
 {{ content }}
 </div>
 
-<p class="meta">Update At: {{ page.date | date: "%F" }}</p>
+<p class="meta">Updated: {{ page.date | date: "%F" }}</p>
 
 {% include disqus.html %}
