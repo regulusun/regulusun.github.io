@@ -23,25 +23,23 @@ categories: coding ios
 
 > Because it respects scope and is type-safe.
 
-仔细看一下，这里用到C的两个声明变量的keyword，static和const：
+仔细看一下这里用到两个C keyword：
 
-> static: 
-
+static: 
+>
 > 1. A static variable inside a function keeps its value between invocations.
-
 > 2. A static global variable or a function is "seen" only in the file it's declared in
 
-
-> const: 
+const: 
 > The compiler won't allow something declared as const to be modified.
 
+从上面解释可以看出，static实现了scoping, const保证了常量不能被修改（编译器校验），而CGFloat的类型定义保证了type-safe。
 
 
-参考：
+
+参考资料：
 
 1. [“static const” vs “#define” in C](http://stackoverflow.com/questions/1674032/static-const-vs-define-in-c)
-
-2. [What does “static” mean in a C program?](http://stackoverflow.com/questions/572547/what-does-static-mean-in-a-c-program)
-
-3. [Does “const” just mean read-only or something more? ](http://stackoverflow.com/questions/4486326/does-const-just-mean-read-only-or-something-more-in-c-c)
+1. [What does “static” mean in a C program?](http://stackoverflow.com/questions/572547/what-does-static-mean-in-a-c-program)
+1. [Does “const” just mean read-only or something more? ](http://stackoverflow.com/questions/4486326/does-const-just-mean-read-only-or-something-more-in-c-c)
 
