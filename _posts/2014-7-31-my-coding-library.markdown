@@ -11,7 +11,7 @@ Coding resources that worth keeping.
 * [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
 
 ### Web Development
-* [jQuery BestPractices](http://gregfranko.com/jquery-best-practices/#/13)
+* [jQuery Best Practices](http://gregfranko.com/jquery-best-practices/#/13)
 * [AwesomeRuby](https://github.com/markets/awesome-ruby)
 * [Introduction to HTTP](http://www.gotealeaf.com/books/http)
 
@@ -21,7 +21,7 @@ Coding resources that worth keeping.
 * [2014 WWDC Videos](https://developer.apple.com/videos/wwdc/2014/)
 * [Awesome iOS](https://github.com/vsouza/awesome-ios): a collection of iOS resources.
 * [core-data-one-line-fetch](http://www.cocoawithlove.com/2008/03/core-data-one-line-fetch.html)
-* [process-of-writing-ios-application](http://www.cocoawithlove.com/2011/06/process-of-writing-ios-application.html): valuable article about how an iOS app was made from sketch.
+* [process-of-writing-ios-application](http://www.cocoawithlove.com/2011/06/process-of-writing-ios-application.html): How an iOS app was made from sketch, explained in detail.
 
 ### Git
 * Tips
