@@ -1,6 +1,6 @@
-This is a simple blog made with jekyll.
+Yet another jekyll blog.
 
-I made this blog them as simple as possible so that I can focus on writing.
+I style this blog as simple as possible so that I can focus on writing.
 
 demo: www.haojianzong.com
 
