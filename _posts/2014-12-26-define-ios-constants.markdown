@@ -35,6 +35,8 @@ const:
 
 从上面解释可以看出，static实现了scoping, const保证了常量不能被修改（编译器校验），而CGFloat的类型定义保证了type-safe。
 
+另外语法高亮也比xcode屎黄色的marco代码好看。
+
 
 
 参考资料：
