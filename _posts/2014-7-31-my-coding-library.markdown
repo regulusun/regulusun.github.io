@@ -34,8 +34,9 @@ A collection of best practices/blog posts/references of mine, keep updating.
 * [trello](www.trello.com) to collaborte.
 
 ### Hacker Blogs
-* [nickbradbury](http://nickbradbury.com/)
-2. [oliveremberton](http://oliveremberton.com/)
+* [Nickbradbury](http://nickbradbury.com/)
+* [Oliver Emberton](http://oliveremberton.com/)
+* [Paul Graham](http://paulgraham.com/)
 
 ## Job
 1. [How to write a Developer CV/Résumé that will get you hired](http://www.slideshare.net/perlcareers/how-to-write-a-developer-cvrsum-that-will-get-you-hired)
