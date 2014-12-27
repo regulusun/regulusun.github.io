@@ -5,7 +5,7 @@ date: "2014-12-27"
 categories: coding
 ---
 
-A collection of best practices/blog posts/references of mine, keep updating.
+Coding resources that worth keeping.
 
 ### Code Standards
 * [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
