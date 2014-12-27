@@ -57,6 +57,22 @@ img.img-center {
 .jz_color {
   color: #a00;
 }
+.jz_tag {
+  display: inline-block;
+  line-height: 1.2em;
+  word-break: break-word;
+  font-size: 13px;
+  font-weight: bold;
+  color: #808393;
+  background-color: #f4f4fa;
+  margin-right: 4px;
+  border-radius: 12px;
+  padding: 4px 8px;
+  border: 0;
+}
+.jz_tag:hover {
+  background-color: #efeff3;
+}
 
 /*****************************************************************************/
 /*
@@ -86,6 +102,13 @@ img.img-center {
 /* About
 /*
 /*****************************************************************************/
+ul.timeline {
+  list-style: none;
+  margin-left: 0 !important;
+}
+ul.timeline li {
+  margin-bottom: 5px;
+}
 
 /*****************************************************************************/
 /*
