@@ -21,3 +21,6 @@ At the same time I started to study Objective-C and iOS development because I wa
 Then one day when I was able to build my own app and had saved up enough money to support myself for a few months, I quit my job again. I worked on my own apps for about four months. The city library was my new home. I also built my personal blog to demonstrate my expertise in coding ([JianZong](http://www.haojianzong.com)). Then as soon as I had built some demo apps, I applied for iOS development occupations online. Luckily, I only interviewed for one company and I got a job.
 
 Though my salary is a little shorter compared with my financial job, I am much happier now. Everyday is a new challenge, and I have a lot of fun stuff for me to learn. I am now eager to learn new technology and enjoy building different stuff at work.
+
+(This post was originally posted on Quora,
+[link](http://www.quora.com/What-was-the-best-part-of-2013-in-your-opinion)).
