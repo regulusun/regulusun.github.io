@@ -273,6 +273,7 @@ ul.timeline li {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 30px;
+  line-height: 1.2em;
 }
 
 .post pre code {
