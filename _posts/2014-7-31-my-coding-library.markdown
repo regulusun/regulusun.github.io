@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "My Coding Library"
+date: "2014-12-27"
 categories: coding
 ---
 
