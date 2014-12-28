@@ -36,7 +36,6 @@ p { margin: 1em 0; }
 
 a         { color: #00a; text-decoration: none; }
 a:hover   { color: #000; }
-a:visited { color: #a0a; }
 
 ul { margin: 8px 0 8px 16px; }
 /* li { margin-bottom: 8px; } */
@@ -75,6 +74,49 @@ img.img-center {
 }
 .clearfix {
   overflow: auto;
+}
+.margin_bottom_0 {
+  margin-bottom: 0 !important;
+}
+.sep20 {
+  height: 20px;
+}
+.published_date {
+  font-size: 14px;
+  color: rgba(0,0,0,0.3);
+}
+.jz_button {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  line-height: 18px;
+  padding: 0 16px;
+  outline: 0;
+  color: #00a;
+  background: rgba(0,0,0,0);
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #00a;
+  vertical-align: bottom;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  border-radius: 999em;
+  -webkit-transition: 100ms background-color,100ms border-color,100ms color;
+  transition: 100ms background-color,100ms border-color,100ms color;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
 }
 
 /*****************************************************************************/

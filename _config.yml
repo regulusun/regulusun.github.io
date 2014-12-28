@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 permalink: none
 port: 4001
+excerpt_separator: <!--more-->

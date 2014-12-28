@@ -15,6 +15,8 @@ Coding resources that worth keeping.
 * [AwesomeRuby](https://github.com/markets/awesome-ruby)
 * [Introduction to HTTP](http://www.gotealeaf.com/books/http)
 
+<!--more-->
+
 ### iOS
 * [objc](http://www.objc.io/): A periodical about best practices and advanced
    techniques for iOS and OS X development.

@@ -2,10 +2,9 @@
 layout: default
 ---
 <div class="post start_page">
-<h2 class="post_title">{{ page.title }}</h2>
+<h2 class="post_title margin_bottom_0">{{ page.title }}</h2>
+<span class="published_date">On {{ site.posts.first.date | date: '%B %d, %Y' }} </span>
 {{ content }}
 </div>
-
-<p class="meta">Updated: {{ page.date | date: "%F" }}</p>
 
 {% include disqus.html %}
