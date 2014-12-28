@@ -4,19 +4,10 @@ title: Jianzong - an iOS and web developer
 ---
 
 <div id="home">
-  <div class="intro">
-    <p>Hi, you are visiting the blog of Hao Jianzong.
-    <p>I am an iOS developer and web developer based in Shenzhen/Hong Kong.</p>
-    <p>Learn more <a href="http://www.haojianzong.com/about">about me</a>. 
-  </div>
   <h2 class="jz_color">Blog Posts</h2>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-  <a class="twitter-timeline" href="https://twitter.com/haojianzong"
-    data-widget-id="516097503448428545">Tweets by @haojianzong</a>
-  <script>!function(d,s,id){var
-    js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
