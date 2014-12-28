@@ -254,7 +254,7 @@ ul.timeline li {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .post ul, .post ol {
