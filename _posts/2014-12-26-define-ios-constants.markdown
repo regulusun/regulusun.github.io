@@ -6,6 +6,8 @@ categories: coding ios
 
 通常，自定义界面的时候，会需要定义很多诸如高度、宽度、item spacing等常量。
 
+<!--more-->
+
 刚学Objective C的时候，我习惯使用下面这种方式来定义常量：
 
     #define MyViewHeight = 200;
