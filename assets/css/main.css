@@ -81,6 +81,9 @@ img.img-center {
 .sep20 {
   height: 20px;
 }
+.sep40 {
+  height: 40px;
+}
 .published_date {
   font-size: 14px;
   color: rgba(0,0,0,0.3);
