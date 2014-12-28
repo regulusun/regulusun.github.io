@@ -73,6 +73,9 @@ img.img-center {
 .jz_tag:hover {
   background-color: #efeff3;
 }
+.clearfix {
+  overflow: auto;
+}
 
 /*****************************************************************************/
 /*
@@ -166,7 +169,11 @@ ul.timeline li {
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
-.header { margin-bottom: 30px; }
+@media only screen and (max-device-width: 480px) { .site { margin-top: 10px;} }
+.header { 
+  margin-bottom: 30px;
+  vertical-align: bottom;
+}
 
 .header h1 {
   font-size: 25px;
@@ -185,29 +192,43 @@ ul.timeline li {
 .avatar {
   width: 35px;
   height: auto;
-  position: relative;
-  top: -3px;
 }
 
-.title {
-  display: inline-block;
+.site_title {
+  display: block;
+  float: left;
 }
 
-.title a {
+.site_title a {
   color: black;
 }
 
-.title a:hover {
+.site_title a:hover {
   color: #a00;
 }
 
-.header a.extra {
-  color: #aaa;
-  margin-left: 1em;
+.menu {
+  float: right;
+  list-style: none;
+  margin: 12px 20px 0 0;
+  padding: 0;
 }
 
-.header a.extra:hover {
-  color: #000;
+@media only screen and (max-device-width: 480px) { .menu { float: left;} }
+
+.menu li {
+  display: inline-block;
+}
+.menu a {
+  font-family: 'Open Sans Condensed', Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-right: 1em;
+}
+.menu a:hover,
+.menu a.active
+{
+  color: black;
 }
 
 .meta {
