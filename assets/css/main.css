@@ -118,6 +118,9 @@ img.img-center {
   -moz-osx-font-smoothing: grayscale;
   -moz-font-feature-settings: "liga" on;
 }
+.snow {
+  color: #e2e2e2;
+}
 
 /*****************************************************************************/
 /*
