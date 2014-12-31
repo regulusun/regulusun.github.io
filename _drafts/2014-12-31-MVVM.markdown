@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "使用MVVM设计模式时遇到的一些问题"
+date:   2014-12-31 21:08:21
+categories: ios coding
+---
+
+MVVM设计模式在MVC的基础上增加了一层，view model。
+
+view
+model作为model和view的中间层，处理model和view之间的逻辑。譬如model要呈现到view的时候，经常要对数据进行处理；而view的内容需要输入到model之前，也会需要进行处理。
+
+但是，注意不要使用view
+model取代了model的责任，譬如，我在controller之间传递变量，这时候一个controller是不知道另一个controller打算怎样使用这个model变量的数据的，所以传递view
+model是不合适的，而应该传递model，在另一个controller中，再以此view
+model实例化一个view model作为呈现   
+
