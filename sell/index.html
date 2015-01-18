@@ -15,9 +15,8 @@ rel="stylesheet">
 <!-- sell content -->
 <div id="sell" class="post">
     <h2 class="text-center jz_color">我的二手货</h2>
-    <p>我在这个页面收录闲置出售的物品，价格参考了淘宝二手、V2EX等网站最近交易的相同类型物品的报价。做这个页面当然主要是为了卖东西换钱，另外也在尝试做一个方便实用、体验良好的闲置物品出售工具。</p>
+    <p>这个页面收录我闲置出售的物品，价格参考了淘宝二手、V2EX等网站最近交易的相同类型物品的报价。做这个页面主要目的是为了卖东西换钱，另外也在尝试做一个方便实用、体验良好的闲置物品出售工具。</p>
     <p>这个页面的源码放在我的github了：<a href="https://github.com/haojianzong/haojianzong.github.io">项目地址</a>。</p>
-  <div id="loading">Loading items...</div>
 </div>
 <!-- /sell content -->
 
@@ -57,39 +56,42 @@ rel="stylesheet">
 </div>
 <!-- /Gallery Modal -->
 
-{% raw %}
-<script id="itemTemplate" type="x-tmpl-mustache">
-    <!-- {{ name }} -->
+{% for item in site.data.second_items %}
+  <!-- {{ item.name }} -->
   <div class="row sp-item">
     <div class="col-sm-3">
       <div class="sp-item-imgs-grp clearfix">
-          <a href="images/items/{{ name }}_1.jpg" title="{{ name }}" data-gallery>
-              <img src="images/items/{{ name }}_thumb_1.jpg" alt="{{ name }}">
+          <a href="images/items/{{ item.name }}_1.jpg" title="{{ item.name }}" data-gallery>
+              <img src="images/items/{{ item.name }}_thumb_1.jpg" alt="{{ item.name }}">
           </a>
-          <a href="images/items/{{ name }}_2.jpg" title="{{ name }}" data-gallery>
-              <img src="images/items/{{ name }}_thumb_2.jpg" alt="{{ name }}">
+          <a href="images/items/{{ item.name }}_2.jpg" title="{{ item.name }}" data-gallery>
+              <img src="images/items/{{ item.name }}_thumb_2.jpg" alt="{{ item.name }}">
           </a>
-          <a href="images/items/{{ name }}_3.jpg" title="{{ name }}" data-gallery>
-              <img src="images/items/{{ name }}_thumb_3.jpg" alt="{{ name }}">
+          <a href="images/items/{{ item.name }}_3.jpg" title="{{ item.name }}" data-gallery>
+              <img src="images/items/{{ item.name }}_thumb_3.jpg" alt="{{ item.name }}">
           </a>
-          <a href="images/items/{{ name }}_4.jpg" title="{{ name }}" data-gallery>
-              <img src="images/items/{{ name }}_thumb_4.jpg" alt="{{ name }}">
+          <a href="images/items/{{ item.name }}_4.jpg" title="{{ item.name }}" data-gallery>
+              <img src="images/items/{{ item.name }}_thumb_4.jpg" alt="{{ item.name }}">
           </a>
       </div>
     </div>
 
     <div class="col-sm-9">
-        <h4 class="sp-item-title">{{ title }}</h4>
+        <h4 class="sp-item-title">{{ item.title }}</h4>
       <div class="sp-item-label-row row">
         <div class="col-xs-12">
-            <span class="sp-item-label sp-item-label-price label label-warning">¥ {{ price }}</span>
-            <span class="sp-item-label sp-item-label-new label label-default">原价：{{ original_price }}</span>
-            <span class="sp-item-label sp-item-label-new label label-default">{{ new }}</span>
-            <span class="sp-item-date sp-item-label-date"><i class="fa fa-clock-o fa-fw"></i>{{ date }}</span>
+            <span class="sp-item-label sp-item-label-price label
+              label-warning">¥ {{ item.price }}</span>
+            <span class="sp-item-label sp-item-label-new label
+              label-default">原价：{{ item.original_price }}</span>
+            <span class="sp-item-label sp-item-label-new label
+              label-default">{{ item.new }}</span>
+            <span class="sp-item-date sp-item-label-date"><i class="fa
+                fa-clock-o fa-fw"></i>{{ item.date }}</span>
         </div>
       </div>
       <p class="sp-item-desc">
-      {{{ desc }}}
+      {{ item.desc }}
       <p>
       <p>购买请twitter联系：
         <a href="http://twitter.com/haojianzong">http://twitter.com/haojianzong</a>
@@ -97,9 +99,8 @@ rel="stylesheet">
     </div>
   </div>
   <div class="sp-item-seperator"></div>
-  <!-- /[[ name ]] -->
-</script>
-{% endraw %}
+  <!-- /{{ item.name }} -->
+{% endfor %}
 
 <!-- gallery vendors -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -107,5 +108,5 @@ rel="stylesheet">
 <script src="js/bootstrap-image-gallery.min.js"></script>
 <!-- /gallery vendors -->
 
-<script src="js/mustache.js"></script>
-<script src="js/secondpro.js"></script>
+<!-- <script src="js/mustache.js"></script> -->
+<!-- <script src="js/secondpro.js"></script> -->
