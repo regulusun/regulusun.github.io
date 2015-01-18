@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "Key Notes on Code Complete"
+title: "Code Complete Note"
 categories: book, coding
 ---
 
-This is my notes on the book Code Complete. If you are a programmer and haven't read this book, I strongly recommend you should read it. Start by reading my notes below or check it out on [amazon][1].
+This is a personal note on the book [Code Complete](http://cc2e.com). 
+
+If you are a programmer and haven't read this book, I strongly recommend you reading it, check it out on [amazon][1].
 
 ## Part I: Laying the Foundation
 ### Chapter 3: Upstream Prerequisites
@@ -26,4 +28,8 @@ This is my notes on the book Code Complete. If you are a programmer and haven't 
 
 (page: 161 of 951 )
 
+Resources: 
+* [Code Complete Checklists](http://cc2e.com/Page.aspx?nid=73)
+
 [1]: http://www.amazon.com/gp/product/0735619670/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0735619670&linkCode=as2&tag=haojianzong-20&linkId=V5ISR5WWTZYWZUT4
+

@@ -7,9 +7,6 @@ categories: coding
 
 Coding resources that worth keeping.
 
-### Code Standards
-* [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
-
 ### Web Development
 * [jQuery Best Practices](http://gregfranko.com/jquery-best-practices/#/13)
 * [AwesomeRuby](https://github.com/markets/awesome-ruby)
@@ -32,6 +29,12 @@ Coding resources that worth keeping.
   * ALWAYS review before commit (use commit -v);
 * [Git for beginners: The definitive practical guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
 * [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
+
+### Code Standards
+* [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
+
+### Code Quality
+* [Code Complete Checklists](http://cc2e.com/Page.aspx?nid=73)
 
 ### Productivity
 * [trello](www.trello.com) to collaborte.
