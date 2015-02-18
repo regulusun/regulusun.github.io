@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "陪伴半年的\<Code Complete>"
+title:  "陪伴半年的<Code Complete>"
 date:   2014-12-31 21:08:21
 categories: coding reading
 ---
 
-\<Code Complete> 是一本难得的可以在kindle上看的技术类经典书籍。 
+<Code Complete> 是一本难得的可以在kindle上看的技术类经典书籍。 
 
 去年项目比较忙，基本上每天就是吃饭睡觉写代码。每日仅剩一点点看书的机会，是在地铁上、等人时、候车时，利用这些碎片时间掏出kindle看上几页。 
 
