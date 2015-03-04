@@ -43,6 +43,7 @@ Coding resources that worth keeping.
 * [Nickbradbury](http://nickbradbury.com/)
 * [Oliver Emberton](http://oliveremberton.com/)
 * [Paul Graham](http://paulgraham.com/)
+* [meditic](http://meditic.com)
 
 ### Career
 1. [How to write a Developer CV/Résumé that will get you hired](http://www.slideshare.net/perlcareers/how-to-write-a-developer-cvrsum-that-will-get-you-hired)
