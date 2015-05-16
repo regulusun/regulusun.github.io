@@ -9,13 +9,14 @@ Apple provides an official way to implement in-app language switch on an
 iOS App. Usually we would use the NSLocalizedString macro to localize our
 apps. But it would require the user to leave the app and change language in the system setting, therefore it is impossible to change language in run-time.
 
-[image-of-change-language-in-system-setting]
+![change language in
+system-setting]({{site.url}}/images/ios-change-language.png)
 
 Fortunately, there already are a lot of useful information out there in the community. After a little research, I setup the following tools to implement in-app language switch.
 
 ### Set Localized String Programatically
 
-We can not use the NSLocalizedString() macro to set localized string anymore.
+We will no longer use the NSLocalizedString() macro to set localized strings anymore.
 Instead, we will have to write a utility class to load different language
 strings from their own language bundle files. 
 
@@ -74,6 +75,6 @@ regex code.
 That's it. Using the above tools, I am able to provide full support of in-app
 language switch.
 
-Additional Information:
+## Additional Information:
 1.
 [How to force NSLocalizedString to use a specific language] (http://stackoverflow.com/questions/1669645/how-to-force-nslocalizedstring-to-use-a-specific-language/1746920#1746920);
