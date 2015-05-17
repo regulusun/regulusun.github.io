@@ -98,7 +98,7 @@ NSLocalizedString\((.*?), nil\)
 
 ![image of xcode regex replace]({{site.url}}/images/xcode-regex-replace.png)
 
-That's it. Using the above tools, I am able to provide full support of in-app
+That's it. Using the above tools, I am able to provide full support of an in-app
 language switch.
 
 ## Additional Information:
