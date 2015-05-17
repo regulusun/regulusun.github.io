@@ -55,7 +55,7 @@ the category for UILabel:
       return self.titleLabel.text;
 }
 - (void)setLocalizedString:(NSString *)localizedString {
-      [self setTitle:[KLLocaleUtils localizedString:localizedString]
+      [self setTitle:[JZLocaleUtils localizedString:localizedString]
       forState:UIControlStateNormal];
 }
 @end
@@ -93,7 +93,7 @@ of the following regular expression in xcode to replace all
 // and get the key string
 NSLocalizedString\((.*?), nil\)
 // replace with
-[KLLocaleUtils localizedString:$1]
+[JZLocaleUtils localizedString:$1]
 ```
 
 ![image of xcode regex replace]({{site.url}}/images/xcode-regex-replace.png)
