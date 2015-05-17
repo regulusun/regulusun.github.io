@@ -44,7 +44,7 @@ take advantage of the `User Defined Runtime Attributes`.
 
 First, create a category for `UILabel`, `UIButton`, `UITextField` and 
 `UITextView` to define the `localizedString` runtime attribute. For example,
-the catetory for UILabel:
+the category for UILabel:
 
 {% highlight objective-c %}
 @interface UIButton (JZLocalizedIB)
@@ -76,20 +76,20 @@ these two steps to update your view controllers in sync.
 
 First, after user change language, use a `NSNotificationCenter` notification to  controllers views.
 
-Second, you will have to update `UITabBarController` items' text seprerately. Use the code described in this
-stackoverflow
+Second, you will have to update `UITabBarController` items' text separately. Use the code described in this
+stackOverFlow
 [answer](http://stackoverflow.com/questions/26683260/reload-tabbarcontroller-after-switching-language).
 
 ## Migrating from Non-in-App to In-App Language Switch
 
 At the time when I am adding the in-app language switch funtionality to our app,
 there are already hundreds of `NSLocalizedString()` codes in the project. It
-would take lot to works to subsititute all of them. Luckly, I make use
-of the following regex expression in xcode to replace all
+would take lot to works to substitute all of them. Luckily, I make use
+of the following regular expression in xcode to replace all
 `NSLocalizedString()` codes:
 
 ```
-// use this regex expression to match NSLocalizedString
+// use this regex to match NSLocalizedString
 // and get the key string
 NSLocalizedString\((.*?), nil\)
 // replace with
@@ -102,5 +102,6 @@ That's it. Using the above tools, I am able to provide full support of in-app
 language switch.
 
 ## Additional Information:
-1.
-[How to force NSLocalizedString to use a specific language] (http://stackoverflow.com/questions/1669645/how-to-force-nslocalizedstring-to-use-a-specific-language/1746920#1746920);
+- [How to force NSLocalizedString to use a specific language] (http://stackoverflow.com/questions/1669645/how-to-force-nslocalizedstring-to-use-a-specific-language/1746920#1746920)
+- [Language Changer: in-app language selection in iOS | Eden Digital Agency ] (http://createdineden.com/blog/2014/december/12/language-changer-in-app-language-selection-in-ios/)
+- [ios - Reload tabBarController after switching language - Stack Overflow ] (http://stackoverflow.com/questions/26683260/reload-tabbarcontroller-after-switching-language)
