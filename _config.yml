@@ -1,4 +1,6 @@
 name: Jianzong
+description: Haojianzong Blog
+url: http://www.haojianzong.com
 markdown: redcarpet
 pygments: true
 permalink: none
