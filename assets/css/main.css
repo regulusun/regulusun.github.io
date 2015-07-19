@@ -243,7 +243,7 @@ ul.timeline li {
 }
 
 .avatar {
-  width: 35px;
+  width: 60px;
   height: auto;
 }
 
@@ -263,7 +263,7 @@ ul.timeline li {
 .menu {
   float: right;
   list-style: none;
-  margin: 12px 20px 0 0;
+  margin: 0 20px 0 0;
   padding: 0;
 }
 
