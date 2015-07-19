@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Implement In-App Language Switch on an iOS App"
+title:  "How to Implement In-App Language Switch in your iOS App"
 date:   2015-05-16 16:20:00
 categories: iOS
 ---
