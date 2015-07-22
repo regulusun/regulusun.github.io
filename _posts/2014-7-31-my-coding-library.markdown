@@ -36,6 +36,9 @@ Coding resources that worth keeping.
 ### Code Quality
 * [Code Complete Checklists](http://cc2e.com/Page.aspx?nid=73)
 
+### Mindset
+* [Teach Yourself Programming in Ten Years](http://norvig.com/21-days.html)
+
 ### Productivity
 * [trello](www.trello.com) to collaborte.
 
