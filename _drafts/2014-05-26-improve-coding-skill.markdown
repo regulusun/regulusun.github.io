@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to Improve Your Coding Skill"
+title:  "Thoughts on Improving Coding Skills"
 date:   2014-05-26 9:55:21
 categories: coding tdd
 ---
@@ -37,25 +37,25 @@ TDD to solve problems.
 
 [is Tdd dead?](http://www.justinweiss.com/blog/2014/04/28/post-railsconf-should-i-still-learn-tdd/)
 
-Best Practices
+Learn Best Practices
 ==============
 1. Search online for best practices as soon as you have programming in a language
    for a while.
 2. Examples: [JQuery Best Practices](http://gregfranko.com/jquery-best-practices/#/).
 
-Looking for help
+Learn How to Look for help
 ================
-1. Use english to describe your problem;
+1. Learn to use standard English to describe your problem;
 2. Read english documents as much as possible. It will also help you to describe problems and terms in english.
-3. Refers to official documents.
+3. Read official documents.
 4. Search github for existing solutions.
 5. Stackoverflow a lot.
 
 Learning By Teaching
 ========
-1. Contributing on github projects;
-2. Answering stackoverflow open questions;
-3. Topic sharings;
+1. Contribute on Github projects;
+2. Answer stackoverflow questions, you can start from the most simple ones;
+3. Discuss instresting problems with your friends;
 
 Reference
 =========

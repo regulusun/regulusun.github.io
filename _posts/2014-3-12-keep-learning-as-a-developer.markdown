@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What Have I Been Learning As A Developer"
+title:  "Keep Learning as a Developer"
 categories: developer
 ---
 

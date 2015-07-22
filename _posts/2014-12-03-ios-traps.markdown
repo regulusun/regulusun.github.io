@@ -1,11 +1,13 @@
 ---
 layout: post
-title:  "iOS 开发陷阱"
+title:  "我在iOS开发中踩过的坑"
 date:   2014-12-03 21:08:21
 categories: coding
 ---
 
-这里收集一些我在iOS开发中经常遇到的陷阱。
+在开发iOS App的时候，有时会遇到莫名其妙的问题，到处又找不到答案。而往往解决后，才发现是这么简单就解决了。
+
+下面把我遇到过的一些坑晒出来，并会不定期更新。
 
 ## Storyboard
 * 如果使用的instantiateViewControllerWithIdentifier，storyboard view controller的size设置不能为infer，因为没有segue连接，所以此时view controller的大小不能由上级view controller决定，会导致autolayout报错。
