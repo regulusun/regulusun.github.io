@@ -5,14 +5,7 @@ date: "2013-12-27"
 categories: coding
 ---
 
-Coding resources that worth keeping.
-
-### Web Development
-* [jQuery Best Practices](http://gregfranko.com/jquery-best-practices/#/13)
-* [AwesomeRuby](https://github.com/markets/awesome-ruby)
-* [Introduction to HTTP](http://www.gotealeaf.com/books/http)
-
-<!--more-->
+This page contains high quality materials that I enjoy and keep for reference.
 
 ### iOS
 * [objc](http://www.objc.io/): A periodical about best practices and advanced
@@ -22,16 +15,21 @@ Coding resources that worth keeping.
 * [core-data-one-line-fetch](http://www.cocoawithlove.com/2008/03/core-data-one-line-fetch.html)
 * [process-of-writing-ios-application](http://www.cocoawithlove.com/2011/06/process-of-writing-ios-application.html): How an iOS app was made from sketch, explained in detail.
 
+<!--more-->
+
+### Web Development
+* [jQuery Best Practices](http://gregfranko.com/jquery-best-practices/#/13)
+* [AwesomeRuby](https://github.com/markets/awesome-ruby)
+* [Introduction to HTTP](http://www.gotealeaf.com/books/http)
+* [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
+
 ### Git
+* [Git for beginners: The definitive practical guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
+* [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
 * Tips
   * Only do one thing for one commit;
   * Write commit message as clearly as possible;
   * ALWAYS review before commit (use commit -v);
-* [Git for beginners: The definitive practical guide](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
-* [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/)
-
-### Code Standards
-* [Front-end Code Standards & Best Practices](http://isobar-idev.github.io/code-standards/)
 
 ### Code Quality
 * [Code Complete Checklists](http://cc2e.com/Page.aspx?nid=73)
@@ -43,9 +41,9 @@ Coding resources that worth keeping.
 * [trello](www.trello.com) to collaborte.
 
 ### Hacker Blog
+* [Paul Graham](http://paulgraham.com/)
 * [Nickbradbury](http://nickbradbury.com/)
 * [Oliver Emberton](http://oliveremberton.com/)
-* [Paul Graham](http://paulgraham.com/)
 * [meditic](http://meditic.com)
 
 ### Career
