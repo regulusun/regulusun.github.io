@@ -10,7 +10,7 @@ Then two years later I quit my job. I couldn't stand it anymore. It was no surpr
 
 Almost one year later I was totally desperate. Every single day I counted my minutes at work, and couldn't sleep at night because I couldn't even face the reality that I was going to work again the next day.
 
-However, I was doing an excellent job as a financial staff. My manager did have high expectations for me. But the better I was doing my job, the worse I felt. It was like that you knew you were sailing in a wrong direction, but the sail boat just could'nt stop moving faster.
+However, I was doing an excellent job as a financial staff. My manager did have high expectations for me. But the better I was doing my job, the worse I felt. It was like that you knew you were sailing in a wrong direction, but the sail boat just couldn't stop moving faster.
 
 I visited Quora every time I felt I couldn't breathe. And then I jumped into the water.
 
