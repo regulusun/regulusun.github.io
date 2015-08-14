@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "看过的技术书很快就忘记，怎么办"
-date:   2014-05-26 9:55:21
+title:  "怎样利用业余时间学习大部头技术书"
+date:   2015-08-14 9:41:41
 categories: learning tech
 ---
 
