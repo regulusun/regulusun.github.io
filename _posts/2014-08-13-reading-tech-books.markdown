@@ -31,10 +31,10 @@ categories: learning tech
 
 然后我将它放在 Chrome 的快速书签栏，随时随地进行记录和查看。
 
-![Study Plan]({{ site.url }}/images/blog/study-plan.png)
+![Study Plan](/images/blog/study-plan.png)
 
 *所有笔记内容都在同一份 Google Sheet 内*
 
-![A Note on Google Sheet]({{ site.url }}/images/blog/note-demo.png)
+![A Note on Google Sheet](/images/blog/note-demo.png)
 
 *记录重点，随时查看*

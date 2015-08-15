@@ -350,6 +350,10 @@ ul.timeline li {
   line-height: 1.2em;
 }
 
+.post img {
+  max-width: 100%;
+}
+
 .post pre code {
   border: none;
 }
