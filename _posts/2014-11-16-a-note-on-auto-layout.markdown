@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "A Note On Using Auto Layout"
-date:   2014-11-16 16:08:21
 categories: tech ios
 ---
 

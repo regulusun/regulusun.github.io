@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Git Flow Keypoints"
-date:   2014-05-08 21:08:21
 categories: tech git
 ---
 

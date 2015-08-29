@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "People Who Help Me Make Career Decision"
-date:   2013-12-5 21:08:21
 categories: career
 ---
 

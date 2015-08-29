@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Thinking in code quality"
-date:   2014-10-6 10:14:21
 categories: coding
 ---
 

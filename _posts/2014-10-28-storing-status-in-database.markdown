@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "使用二进制表示状态(Enum Flags)"
-date: 2014-10-28 23:10
 categories: coding
 ---
 今天看到下面这样的java代码：

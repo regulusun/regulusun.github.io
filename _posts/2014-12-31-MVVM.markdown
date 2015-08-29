@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "一个错误使用MVVM设计模式的教训"
-date:   2014-12-31 21:08:21
 categories: ios coding
 ---
 

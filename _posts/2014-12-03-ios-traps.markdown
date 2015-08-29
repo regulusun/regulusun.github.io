@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "我在iOS开发中踩过的坑"
-date:   2014-12-03 21:08:21
 categories: coding
 ---
 

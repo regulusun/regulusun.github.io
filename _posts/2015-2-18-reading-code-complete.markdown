@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "陪伴半年的Code Complete"
-date:   2014-12-31 21:08:21
 categories: coding reading
 ---
 

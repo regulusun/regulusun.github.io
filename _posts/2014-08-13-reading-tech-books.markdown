@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "怎样利用业余时间学习大部头技术书"
-date:   2015-08-14 9:41:41
 categories: learning tech
 ---
 
