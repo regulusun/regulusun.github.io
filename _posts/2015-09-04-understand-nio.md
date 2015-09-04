@@ -57,7 +57,8 @@ NIO的主要应用在高性能、高容量服务端应用程序，典型的有Ap
 现在缓冲区满了，我们必须将其清空。我们想把这个缓冲区传递给一个通道，以使内容能被全部写出，但现在执行get()无疑会取出未定义的数据。我们必须将 posistion设为0，然后通道就会从正确的位置开始读了，但读到哪算读完了呢？这正是limit引入的原因，它指明缓冲区有效内容的未端。这个操作 在缓冲区中叫做翻转：`buffer.flip()`。   
 ![缓冲区逻辑视图](http://regulusun.github.io/images/15184249_V47C.png)  
 rewind操作与flip相似，但不影响limit。 
-将数据从输入通道copy到输出通道的过程应该是这样的：  
+将数据从输入通道copy到输出通道的过程应该是这样的：
+ 
 ```java
 while (true) {
      buffer.clear();  // 重设缓冲区以便接收更多字节
@@ -90,7 +91,8 @@ duplicate方法创建一个与原始缓冲区类似的缓冲区，两个缓冲�
 + 视图缓冲区 
 视图缓冲区和缓冲区复制很像，不同的只是数据类型，所以字节对应关系也略有不同。比如ByteBuffer.asCharBuffer，那么转换后的缓冲区通过get操作获得的元素对应备份存储中的2个字节。 
 ### 如何存取无符号整数？ 
-Java中并没有直接提供无符号数值的支持，每个从缓冲区读出的无符号值被升到比它大的下一个数据类型中。  
+Java中并没有直接提供无符号数值的支持，每个从缓冲区读出的无符号值被升到比它大的下一个数据类型中。
+ 
 ```java
     public static short getUnsignedByte(ByteBuffer bb) {
         return ((short) (bb.get() & 0xff));
@@ -107,7 +109,8 @@ Java中并没有直接提供无符号数值的支持，每个从缓冲区读出�
 ## 使用通道 
 打开通道比较简单，除了FileChannel，都用open方法打开。 
 我们知道，通道是和缓冲区交互的，从缓冲区获取数据进行传输，或将数据传输给缓冲区。从类继承层次结构可以看出，通道一般都是双向的（除FileChannel）。 
-下面来看一下通道间数据传输的代码：  
+下面来看一下通道间数据传输的代码：
+ 
 ```java
     private static void channelCopy(ReadableByteChannel src,
                                      WritableByteChannel dest)
@@ -140,7 +143,8 @@ Java中并没有直接提供无符号数值的支持，每个从缓冲区读出�
 Socket通道有三个，分别是ServerSocketChannel、SocketChannel和DatagramChannel，而它们又分别对 应java.net包中的Socket对象ServerSocket、Socket和DatagramSocket；Socket通道被实例化时，都会创 建一个对等的Socket对象。 
 Socket通道可以运行非阻塞模式并且是可选择的，非阻塞I/O与可选择性是紧密相连的，这也正是管理阻塞的API要在 SelectableChannel中定义的原因。设置非阻塞非常简单，只要调用configureBlocking(false)方法即可。如果需要中 途更改阻塞模式，那么必须首先获得blockingLock()方法返回的对象的锁。 
 ### ServerSocketChannel 
-ServerSocketChannel是一个基于通道的socket监听器。但它没有bind()方法，因此需要取出对等的Socket对象并使用它来 绑定到某一端口以开始监听连接。在非阻塞模式下，当没有传入连接在等待时，其accept()方法会立即返回null。正是这种检查连接而不阻塞的能力实 现了可伸缩性并降低了复杂性，选择性也因此得以实现。  
+ServerSocketChannel是一个基于通道的socket监听器。但它没有bind()方法，因此需要取出对等的Socket对象并使用它来 绑定到某一端口以开始监听连接。在非阻塞模式下，当没有传入连接在等待时，其accept()方法会立即返回null。正是这种检查连接而不阻塞的能力实 现了可伸缩性并降低了复杂性，选择性也因此得以实现。
+ 
 ```java
     ByteBuffer buffer = ByteBuffer.wrap("Hello World".getBytes());
     ServerSocketChannel ssc = ServerSocketChannel.open();
@@ -195,7 +199,8 @@ b.如果通道的键已处于已选择的键的集合中，键的ready集合将�
 ## 并发性 
 ### 选择过程的可扩展性 
 在单cpu中使用一个线程为多个通道提供服务可能是个好主意，但对于多cpu的系统，单线程必然比多线程在性能上要差很多。 
-一个比较不错的多线程策略是，以所有的通道使用一个选择器（或多个选择器，视情况），并将以就绪通道的服务委托给其他线程。用一个线程监控通道的就绪状态，并使用一个工作线程池来处理接收到的数据。讲了这么多，下面来看一段用NIO写的简单服务器代码：  
+一个比较不错的多线程策略是，以所有的通道使用一个选择器（或多个选择器，视情况），并将以就绪通道的服务委托给其他线程。用一个线程监控通道的就绪状态，并使用一个工作线程池来处理接收到的数据。讲了这么多，下面来看一段用NIO写的简单服务器代码：
+ 
 ```java
 private void run(int port) throws IOException {
     // Allocate buffer
