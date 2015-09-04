@@ -5,8 +5,8 @@ categories: reading note
 ---
 # 基础概念
 ## 缓冲区操作
-缓冲区及操作是所有I/O的基础，进程执行I/O操作，归结起来就是向操作系统发出请求，让它要么把缓冲区里的数据排干（写），要么把缓冲区填满（读）。如下图
-![缓冲区示意图](http://regulusun.github.io/images/15184210_Xonl.png)
+缓冲区及操作是所有I/O的基础，进程执行I/O操作，归结起来就是向操作系统发出请求，让它要么把缓冲区里的数据排干（写），要么把缓冲区填满（读）。如下图  
+![缓冲区示意图](http://regulusun.github.io/images/15184210_Xonl.jpg)
 ## 内核空间、用户空间 
 上图简单描述了数据从磁盘到用户进程的内存区域移动的过程，其间涉及到了内核空间与用户空间。这两个空间有什么区别呢？ 
 用户空间就是常规进程（如JVM）所在区域，用户空间是非特权区域，如不能直接访问硬件设备。内核空间是操作系统所在区域，那肯定是有特权啦，如能与设备控制器通讯，控制用户区域的进程运行状态。进程执行I/O操作时，它执行一个系统调用把控制权交由内核。 
@@ -16,21 +16,22 @@ categories: reading note
 # 5种I/O模型
 说起I/O模型，网络上有一个错误的概念，异步非阻塞/阻塞模型，其实异步根本就没有阻不阻塞之说，异步模型就是异步模型。让我们来看一看Richard Stevens在其UNIX网络编程卷1中提出的5个I/O模型吧。
 
-+ 阻塞式I/O
++ 阻塞式I/O  
 ![阻塞式I/O](http://regulusun.github.io/images/15184212_GdVp.png)
-+ 非阻塞式I/O
++ 非阻塞式I/O  
 ![非阻塞式I/O](http://regulusun.github.io/images/15184217_zZm1.png)
-+ I/O复用（Java NIO就是这种模型）
++ I/O复用（Java NIO就是这种模型）  
 ![I/O复用](http://regulusun.github.io/images/15184220_G7XH.png)
 + 信号驱动式I/O
-+ 异步I/O
++ 异步I/O  
 ![异步I/O](http://regulusun.github.io/images/15184226_0FqM.png)
 
 由POSIX术语定义，同步I/O操作导致请求进程阻塞，直到I/O操作完成；异步I/O操作不导致请求进程阻塞。5种模型中的前4种都属于同步I/O模型。
 
 # Why NIO?
 开始讲NIO之前，了解为什么会有NIO，相比传统流I/O的优势在哪，它可以用来做什么等等的问题，还是很有必要的。
-传统流I/O是基于字节的，所有I/O都被视为单个字节的移动；而NIO是基于块的，大家可能猜到了，NIO的性能肯定优于流I/O。没错！其性能的提高 要得益于其使用的结构更接近操作系统执行I/O的方式：通道和缓冲器。我们可以把它想象成一个煤矿，通道是一个包含煤层（数据）的矿藏，而缓冲器则是派送 到矿藏的卡车。卡车载满煤炭而归，我们再从卡车上获得煤炭。也就是说，我们并没有直接和通道交互；我们只是和缓冲器交互，并把缓冲器派送到通道。通道要么 从缓冲器获得数据，要么向缓冲器发送数据。（这段比喻出自Java编程思想）
+传统流I/O是基于字节的，所有I/O都被视为单个字节的移动；而NIO是基于块的，大家可能猜到了，NIO的性能肯定优于流I/O。没错！其性能的提高 要得益于其使用的结构更接近操作系统执行I/O的方式：通道和缓冲器。我们可以把它想象成一个煤矿，通道是一个包含煤层（数据）的矿藏，而缓冲器则是派送 到矿藏的卡车。卡车载满煤炭而归，我们再从卡车上获得煤炭。也就是说，我们并没有直接和通道交互；我们只是和缓冲器交互，并把缓冲器派送到通道。通道要么 从缓冲器获得数据，要么向缓冲器发送数据。（这段比喻出自Java编程思想）  
+
 NIO的主要应用在高性能、高容量服务端应用程序，典型的有Apache Mina就是基于它的。
 
 # 缓冲区 
@@ -45,19 +46,19 @@ NIO的主要应用在高性能、高容量服务端应用程序，典型的有Ap
 + 位置Position：下一个要被读或写的元素的索引 
 + 标记Mark：备忘位置，调用mark()来设定mark=position，调用reset()设定position=mark 
 
-这四个属性总是遵循这样的关系：0<=mark<=position<=limit<=capacity。下图是新创建的容量为10的缓冲区逻辑视图：
+这四个属性总是遵循这样的关系：0<=mark<=position<=limit<=capacity。下图是新创建的容量为10的缓冲区逻辑视图：  
 ![缓冲区逻辑视图](http://regulusun.github.io/images/15184237_ffbM.png)
-`buffer.put((byte)'H').put((byte)'e').put((byte)'l').put((byte)'l').put((byte)'o');`
-五次调用put后的缓冲区：
-`buffer.put(0,(byte)'M').put((byte)'w');`
-![缓冲区逻辑视图](http://regulusun.github.io/images/15184241_NUYi.png)
-调用绝对版本的put不影响position：
-![缓冲区逻辑视图](http://regulusun.github.io/images/15184246_0SbU.png)
-现在缓冲区满了，我们必须将其清空。我们想把这个缓冲区传递给一个通道，以使内容能被全部写出，但现在执行get()无疑会取出未定义的数据。我们必须将 posistion设为0，然后通道就会从正确的位置开始读了，但读到哪算读完了呢？这正是limit引入的原因，它指明缓冲区有效内容的未端。这个操作 在缓冲区中叫做翻转：`buffer.flip()`。 
-![缓冲区逻辑视图](http://regulusun.github.io/images/15184249_V47C.png)
+`buffer.put((byte)'H').put((byte)'e').put((byte)'l').put((byte)'l').put((byte)'o');`  
+五次调用put后的缓冲区：  
+`buffer.put(0,(byte)'M').put((byte)'w');`  
+![缓冲区逻辑视图](http://regulusun.github.io/images/15184241_NUYi.png)  
+调用绝对版本的put不影响position：  
+![缓冲区逻辑视图](http://regulusun.github.io/images/15184246_0SbU.png)  
+现在缓冲区满了，我们必须将其清空。我们想把这个缓冲区传递给一个通道，以使内容能被全部写出，但现在执行get()无疑会取出未定义的数据。我们必须将 posistion设为0，然后通道就会从正确的位置开始读了，但读到哪算读完了呢？这正是limit引入的原因，它指明缓冲区有效内容的未端。这个操作 在缓冲区中叫做翻转：`buffer.flip()`。   
+![缓冲区逻辑视图](http://regulusun.github.io/images/15184249_V47C.png)  
 rewind操作与flip相似，但不影响limit。 
-将数据从输入通道copy到输出通道的过程应该是这样的：
-```java
+将数据从输入通道copy到输出通道的过程应该是这样的：  
+``` java
 while (true) {
      buffer.clear();  // 重设缓冲区以便接收更多字节
      int r = fcin.read( buffer );
@@ -90,7 +91,7 @@ duplicate方法创建一个与原始缓冲区类似的缓冲区，两个缓冲�
 视图缓冲区和缓冲区复制很像，不同的只是数据类型，所以字节对应关系也略有不同。比如ByteBuffer.asCharBuffer，那么转换后的缓冲区通过get操作获得的元素对应备份存储中的2个字节。 
 ### 如何存取无符号整数？ 
 Java中并没有直接提供无符号数值的支持，每个从缓冲区读出的无符号值被升到比它大的下一个数据类型中。
-```java
+``` java
     public static short getUnsignedByte(ByteBuffer bb) {
         return ((short) (bb.get() & 0xff));
     }
@@ -107,7 +108,7 @@ Java中并没有直接提供无符号数值的支持，每个从缓冲区读出�
 打开通道比较简单，除了FileChannel，都用open方法打开。 
 我们知道，通道是和缓冲区交互的，从缓冲区获取数据进行传输，或将数据传输给缓冲区。从类继承层次结构可以看出，通道一般都是双向的（除FileChannel）。 
 下面来看一下通道间数据传输的代码：
-```java
+``` java
     private static void channelCopy(ReadableByteChannel src,
                                      WritableByteChannel dest)
             throws IOException {
@@ -140,7 +141,7 @@ Socket通道有三个，分别是ServerSocketChannel、SocketChannel和DatagramC
 Socket通道可以运行非阻塞模式并且是可选择的，非阻塞I/O与可选择性是紧密相连的，这也正是管理阻塞的API要在 SelectableChannel中定义的原因。设置非阻塞非常简单，只要调用configureBlocking(false)方法即可。如果需要中 途更改阻塞模式，那么必须首先获得blockingLock()方法返回的对象的锁。 
 ### ServerSocketChannel 
 ServerSocketChannel是一个基于通道的socket监听器。但它没有bind()方法，因此需要取出对等的Socket对象并使用它来 绑定到某一端口以开始监听连接。在非阻塞模式下，当没有传入连接在等待时，其accept()方法会立即返回null。正是这种检查连接而不阻塞的能力实 现了可伸缩性并降低了复杂性，选择性也因此得以实现。
-```java
+``` java
     ByteBuffer buffer = ByteBuffer.wrap("Hello World".getBytes());
     ServerSocketChannel ssc = ServerSocketChannel.open();
     ssc.socket().bind(new InetSocketAddress(12345));
@@ -195,7 +196,7 @@ b.如果通道的键已处于已选择的键的集合中，键的ready集合将�
 ### 选择过程的可扩展性 
 在单cpu中使用一个线程为多个通道提供服务可能是个好主意，但对于多cpu的系统，单线程必然比多线程在性能上要差很多。 
 一个比较不错的多线程策略是，以所有的通道使用一个选择器（或多个选择器，视情况），并将以就绪通道的服务委托给其他线程。用一个线程监控通道的就绪状态，并使用一个工作线程池来处理接收到的数据。讲了这么多，下面来看一段用NIO写的简单服务器代码：
-```java
+``` java
 private void run(int port) throws IOException {
     // Allocate buffer
     ByteBuffer echoBuffer = ByteBuffer.allocate(1024);
@@ -263,14 +264,16 @@ I/O多路复用有两种经典模式：基于同步I/O的reactor和基于异步I
 + 某个事件处理者宣称它对某个socket上的读事件很感兴趣; 
 + 事件分离者等着这个事件的发生; 
 + 当事件发生了，事件分离器被唤醒，这负责通知先前那个事件处理者; 
-+ 事件处理者收到消息，于是去那个socket上读数据了. 如果需要，它再次宣称对这个socket上的读事件感兴趣，一直重复上面的步骤; 
++ 事件处理者收到消息，于是去那个socket上读数据了. 如果需要，它再次宣称对这个socket上的读事件感兴趣，一直重复上面的步骤;  
+
 ### Proactor 
 + 事件处理者直接投递发一个写操作(当然，操作系统必须支持这个异步操作). 这个时候，事件处理者根本不关心读事件，它只管发这么个请求，它魂牵梦萦的是这个写操作的完成事件。这个处理者很拽，发个命令就不管具体的事情了，只等着别人（系统）帮他搞定的时候给他回个话。 
 + 事件分离者等着这个读事件的完成(比较下与Reactor的不同); 
 + 当事件分离者默默等待完成事情到来的同时，操作系统已经在一边开始干活了，它从目标读取数据，放入用户提供的缓存区中，最后通知事件分离者，这个事情我搞完了; 
 + 事件分享者通知之前的事件处理者: 你吩咐的事情搞定了; 
 + 事件处理者这时会发现想要读的数据已经乖乖地放在他提供的缓存区中，想怎么处理都行了。如果有需要，事件处理者还像之前一样发起另外一个写操作，和上面的几个步骤一样。 
-异步的proactor固然不错，但它局限于操作系统（要支持异步操作），为了开发真正独立平台的通用接口，我们可以通过reactor模拟来实现proactor。
+异步的proactor固然不错，但它局限于操作系统（要支持异步操作），为了开发真正独立平台的通用接口，我们可以通过reactor模拟来实现proactor。  
+
 ### Proactor（模拟） 
 + 等待事件 (Proactor 的工作) 
 + 读数据(看，这里变成成了让 Proactor 做这个事情) 

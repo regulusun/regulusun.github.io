@@ -5,3 +5,10 @@ pygments: true
 permalink: none
 port: 4001
 excerpt_separator: <!--more-->
+redcarpet:
+        extensions:
+                - fenced_code_blocks
+                - no_intra_emphasis
+                - strikethrough
+                - autolink
+                - tables
