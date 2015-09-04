@@ -58,7 +58,7 @@ NIO的主要应用在高性能、高容量服务端应用程序，典型的有Ap
 ![缓冲区逻辑视图](http://regulusun.github.io/images/15184249_V47C.png)  
 rewind操作与flip相似，但不影响limit。 
 将数据从输入通道copy到输出通道的过程应该是这样的：  
-``` java
+```java
 while (true) {
      buffer.clear();  // 重设缓冲区以便接收更多字节
      int r = fcin.read( buffer );
