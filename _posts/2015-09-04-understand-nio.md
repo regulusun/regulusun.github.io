@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Understand NIO"
+categories: reading note
+---
 # 基础概念
 ## 缓冲区操作
 缓冲区及操作是所有I/O的基础，进程执行I/O操作，归结起来就是向操作系统发出请求，让它要么把缓冲区里的数据排干（写），要么把缓冲区填满（读）。如下图
