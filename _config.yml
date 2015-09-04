@@ -1,6 +1,5 @@
-name: Jianzong
-description: Haojianzong Blog
-url: http://www.haojianzong.com
+name: PaulWalker
+description: PaulWalker Blog
 markdown: redcarpet
 pygments: true
 permalink: none
