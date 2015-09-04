@@ -1,3 +1,7 @@
+---
+layout:post
+title:领域驱动设计学习笔记
+---
 # 学习计划 
 + 《实现领域驱动设计》 && 《领域驱动设计精简版》
 + 读http://isis.apache.org/guides/ug.html Core Concepts一节
