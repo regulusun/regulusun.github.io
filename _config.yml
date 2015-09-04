@@ -1,14 +1,8 @@
 name: PaulWalker
 description: PaulWalker Blog
-markdown: redcarpet
-pygments: true
 permalink: none
 port: 4001
 excerpt_separator: <!--more-->
+markdown: redcarpet
 redcarpet:
-        extensions:
-                - fenced_code_blocks
-                - no_intra_emphasis
-                - strikethrough
-                - autolink
-                - tables
+        extensions: ["fenced_code_blocks", "tables" , "no_intra_emphasis" , "autolink", "with_toc_data"]
