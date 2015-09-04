@@ -168,48 +168,6 @@ ul.timeline li {
 
 /*****************************************************************************/
 /*
-/* Items
-/*
-/*****************************************************************************/
-#sell>h2 {
-  margin: 25px 0;
-}
-.sp-item {
-  font-size: 13px;
-  color: #262236;
-  background-color: white;
-  margin: 40px 0 10px 0;
-}
-.sp-item-title {
-  margin: 0 0 5px 0;
-}
-.sp-item-imgs-grp {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.sp-item-label-row {
-  margin-bottom: 10px;
-}
-.sp-item-label-price {
-  background-color: #444 !important;
-}
-.sp-item-label-new {
-  background-color: #A5B0C3 !important;
-}
-.sp-item-label-date {
-  color: #A5B0C3;
-}
-.sp-item-imgs-grp img {
-  float: left;
-  width: 50%;
-}
-.sp-item-seperator {
-  background-color: #eee;
-  height: 1px;
-}
-/*****************************************************************************/
-/*
 /* Site
 /*
 /*****************************************************************************/
@@ -335,11 +293,13 @@ ul.timeline li {
   margin-left: 1.35em;
 }
 
+/* 
 .post code {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .2em;
 }
+*/
 
 .post .post_title {
   color: #a00;
@@ -353,10 +313,11 @@ ul.timeline li {
 .post img {
   max-width: 100%;
 }
-
+/*
 .post pre code {
   border: none;
 }
+*/
 
 /* terminal */
 .post pre.terminal {
@@ -370,6 +331,7 @@ ul.timeline li {
 }
 
 /* blockquote */
+/*
 blockquote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -388,3 +350,4 @@ blockquote:before {
 blockquote p {
   display: inline;
 }
+*/
