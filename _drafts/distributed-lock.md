@@ -4,7 +4,8 @@
 
 分布式锁实现，其实还有一种做法更简单一些，后面会讲到；现在要在这个基础上增加并发数控制，这也很简单，tair上再分配一个key，专门用来存储当前并发数，嗅觉灵敏的同学可能已经嗅到了一种常用的设计模式：装饰器模式。对！我们现在就是要在功能上再增加一些额外的功能，这正好符合装饰器模式。
 
-那么我们先来看一下分布式锁的接口DistributedLock：
+那么我们先来看一下分布式锁的接口DistributedLock：  
+
 ```java
 	/**
      * 尝试获取分布式锁
@@ -22,9 +23,11 @@
      */
     String getLockInfo(Serializable key);
 ```
+
 接口相当简单，和jcp里的lock接口类似，只是多了一个获取分布式锁信息的方法，我用另一种方法没法获取分布式锁信息，所以为了高大上，我果断采用了put的版本。
 
-tryLock返回的是LockStatus，这是一个枚举，先来看下这个枚举吧：
+tryLock返回的是LockStatus，这是一个枚举，先来看下这个枚举吧：  
+
 ```java
 public static enum LockStatus {
     /**
@@ -53,9 +56,11 @@ public static enum LockStatus {
     REENTRANT
 }
 ```
+
 看完大家应该都明白了吧，获取锁的结果可能是成功，成功也可能是重入，失败也可能是异常，也可能是其他原因，这里把获取结果细化，对强化功能是非常有好处的，而我们正要用装饰器模式来装饰基础功能。
 
 说到基础功能，那先来看一看怎么用tair实现吧:
+
 ```java
 public class TairLock implements DistributedLock {
 
@@ -105,11 +110,13 @@ public class TairLock implements DistributedLock {
     }
 }
 ```
+
 这里说明两点：
 - 我在单机测试并发时，并发数一高就会报大量连接异常或超时等异常，因为单机并发数默认最高100
 - 既然提到了第一点，那么我在想，是不是要把tair的操作次数降到最低，所以加了threadLocal来进行判定
 
 另外锁信息是由机器IP加线程ID来记录的
+
 ```java
 public static class LockInfoHelper {
         public static String getDistributedLockInfo() {
@@ -125,6 +132,7 @@ public static class LockInfoHelper {
 ```
 
 接下来我们就要应用装饰器模式来装饰这个基础功能了，这里装饰器类的名称我借鉴了IO下面的FilterXXXStream，定义为FilterLock
+
 ```java
 public class FilterLock implements DistributedLock {
     protected DistributedLock distributedLock;
@@ -147,12 +155,16 @@ public class FilterLock implements DistributedLock {
     }
 }
 ```
+
 那么接下来我们就要装饰我们的基础类了，tair提供了下面的接口，只要把upperBound设成1。
+
 ```java
 public Result<Integer> incr(int namespace, Serializable key, int value,
 			int defaultValue, int expireTime, int lowBound, int upperBound)
 ```
+
 估计大家一看就明白了，那我也不多讲了，直接上代码
+
 ```java
 public class ConcurrencyControlLock extends FilterLock {
     private static final int LOCK_NAMESPACE = xxxxx;
@@ -197,5 +209,6 @@ public class ConcurrencyControlLock extends FilterLock {
     }
 }
 ```
+
 对了，记得用的时候用try/finally来保证unlock执行。
 
