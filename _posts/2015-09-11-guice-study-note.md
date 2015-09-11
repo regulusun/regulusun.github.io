@@ -1,3 +1,8 @@
+---
+layout: post
+title: "Guice学习笔记"
+categories: ioc
+---
 ## 依赖注入
   依赖注入，控制反转，相信这些概念大家都比较清楚了，举一个不是很对的说法，就是不要自己new，把控制权交给框架，让框架帮你完成对象的创建，这样你的类里就不会引入某些接口的实现类了；如果对这些概念还不是太清楚，请传送到[这里](http://martinfowler.com/articles/injection.html)。
 ### 设计理念
