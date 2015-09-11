@@ -6,7 +6,8 @@ categories: ioc
 ## 依赖注入
   依赖注入，控制反转，相信这些概念大家都比较清楚了，举一个不是很对的说法，就是不要自己new，把控制权交给框架，让框架帮你完成对象的创建，这样你的类里就不会引入某些接口的实现类了；如果对这些概念还不是太清楚，请传送到[这里](http://martinfowler.com/articles/injection.html)。
 ### 设计理念
-![guice](http://regulusun.github.io/images/guice.png)
+![guice](http://regulusun.github.io/images/guice.png)  
+
 + injector是容器，injector包含多个binding，binding是在创建injector时，由module的configure方法配置
 + 每个binding由key、scope、provider组成，其中scope是可选的，默认为单件singleton
 + key唯一标识binding，injector可以通过key找到binding；key包含类型与注解，注解是可选的，比如一个类有多个实现时，为了让binding唯一，必须再指定注解以示区别
@@ -24,20 +25,58 @@ categories: ioc
 
 ## Guice Module
   guice的module，上面也说了，类似spring的分文件形式，Module接口只定义了一个configure方法    
-`void configure(Binder binder);`  
+  
+```java
+/**
+* Contributes bindings and other configurations for this module to {@code binder}.
+* <p/>
+* <p><strong>Do not invoke this method directly</strong> to install submodules. Instead use
+* {@link Binder#install(Module)}, which ensures that {@link Provides provider methods} are
+* discovered.
+*/
+void configure(Binder binder);
+```  
+
   在其中可以定义一些绑定（binding）关系，比如bind(interface).to(implementation)，这种方式就绑定了接口与其实现，也就意味着在这个模块中通过@Inject标注的interface，最终都会以implementation注入。  
   如果仅仅就这样，的确与spring分文件的形式没多少差别，那么它是否还有其他优点或优势呢？在我看来，优点是明显的，相对于spring分文件的形式，guice的module在抽象层面更进一层，它把spring的分文件形式抽象为一个个模块，模块可以被重用，也可以被继承或覆写，模块可以有子模块，这赋予了更灵活的编程方式与架构模式。
 
 ### Reuse
   模块的重用，其实就是一组类的重用，模块重用很简单，从下面Guice类中的这个方法的声明部分就可以看出来，模块在guice中是怎么重用的  
-`public static Injector createInjector(Iterable<? extends Module> modules);`   
+  
+```java
+/**
+* Creates an injector for the given set of modules.
+*
+* @throws CreationException if one or more errors occur during Injector
+*                           creation
+*/
+public static Injector createInjector(Iterable<? extends Module> modules);
+```   
+
   比如有一个基础配置类Settings，其binding在模块SettingsModule中，那么其它模块如果要读取配置，就会在createInjector时把SettingsModule  
   添加进去，以注入Settings。由此可见，像SettingsModule这种基础模块会在系统中大量地重用，更进一步，你可以利用这些基础模块构建出一个面向模块化开发的基础框架。
 
 ### Override
   模块的覆写，应该也是比较常见的场景，比如我有一个模块提供了一些功能，现在有个业务需要该模块的大部分功能，只覆写其中一个或几个功能，  
-  这时候我们就可以利用Guice提供的工具类Modules下面的这个方法来实现覆写  
-`Modules.override(Iterable<? extends Module> modules).with(Iterable<? extends Module> overrides)`  
+  这时候我们就可以利用Guice提供的工具类Modules下面的这个方法来实现覆写 
+  
+```java
+/**
+ * Returns a builder that creates a module that overlays override modules over the given
+ * modules. If a key is bound in both sets of modules, only the binding from the override modules
+ * is kept. This can be used to replace the bindings of a production module with test bindings:
+ * <pre>
+ * Module functionalTestModule
+ *     = Modules.override(new ProductionModule()).with(new TestModule());
+ * </pre>
+ * <p/>
+ * <p>Prefer to write smaller modules that can be reused and tested without overrides.
+ *
+ * @param modules the modules whose bindings are open to be overridden
+ */
+Modules.override(Iterable<? extends Module> modules).with(Iterable<? extends Module> overrides)
+```  
+
  当然，用测试模块覆写一部分生产模块的功能，在测试工程中是很常见的，这样有利于测试用例的编写。
 
 ### Extensibility
