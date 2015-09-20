@@ -4,7 +4,7 @@ title: "领域驱动设计学习笔记"
 categories: reading note
 ---
 
-> ![领域驱动设计经典书籍](http://regulusun.github.io/images/ddd.jpg)
+> ![领域驱动设计经典书籍](http://regulusun.github.io/images/ddd-book.jpg)
 
 # 学习计划 
 + 《实现领域驱动设计》 && 《领域驱动设计精简版》
