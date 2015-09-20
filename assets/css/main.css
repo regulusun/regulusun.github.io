@@ -334,14 +334,12 @@ ul.timeline li {
 */
 
 /* blockquote */
-/*
 blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+  border-left: 4px solid #ddd;
+  padding: 0.5em 15px;
+  color:#777
 }
+/*
 blockquote:before {
   color: #ccc;
   content: open-quote;
