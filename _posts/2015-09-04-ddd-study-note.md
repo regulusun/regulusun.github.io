@@ -8,7 +8,7 @@ categories: reading note
 
 # 学习计划 
 + 《实现领域驱动设计》 && 《领域驱动设计精简版》
-+ 读http://isis.apache.org/guides/ug.html Core Concepts一节
++ 读[Apche Isis User Guide](http://isis.apache.org/guides/ug.html) Core Concepts一节
 + 用DDD构建一个Demo
 
 # 一些不错的DDD资源
