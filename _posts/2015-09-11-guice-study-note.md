@@ -97,6 +97,10 @@ Modules.override(Iterable<? extends Module> modules).with(Iterable<? extends Mod
   | Injector | 管理应用的对象图，由一组Modules构成，可以从中获得所有Binding及依赖图（dependency graph） |  
 ## Featrues & Extentions
   待续
+  | a | b |
+  | --- | --- |
+  | aaa | bbb | 
+  | ccc | aaa |
 ## Guice AOP 
   待续
 
