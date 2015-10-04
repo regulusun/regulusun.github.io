@@ -85,7 +85,16 @@ Modules.override(Iterable<? extends Module> modules).with(Iterable<? extends Mod
   这个扩展提供了两种方式*MultiBinder*和*MapBinder*，来支持模块功能扩展点的扩展。
 
 ## Guice SPI设计
-  待续
+  Gucie提供SPI，主要是用来开发工具、扩展或插件的。
+  Guice提供了以下几个核心抽象，理解这些抽象非常重要：
+  | 抽象 | 说明 |
+  |: ---: |:--- :|
+  |Key | Key由类型Type和可选的绑定注解（binding annotation）来定义，唯一标识一个绑定binding|
+  |InjectionPoint|注入点，由一个Member（可以是构造器、字段或方法）与一组Dependency来定义|
+  |Dependency|一个注入点可能对应多个Dependency，一个Dependency由一个关联到注入点的Key来定义|
+  |Element|配置单元，可被访问，详见`public interface ElementVisitor<V>`|
+  |Module|由一组Elements构成，你可以从模块中抽取出Elements（`Elements#getElements(com.google.inject.Module[])`），然后重写这些Elements来构成新的Module|
+  |Injector|管理应用的对象图，由一组Modules构成，可以从中获得所有Binding及依赖图（dependency graph）|
 ## Featrues & Extentions
   待续
 ## Guice AOP 
