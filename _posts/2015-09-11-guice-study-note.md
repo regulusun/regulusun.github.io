@@ -85,7 +85,8 @@ Modules.override(Iterable<? extends Module> modules).with(Iterable<? extends Mod
   这个扩展提供了两种方式*MultiBinder*和*MapBinder*，来支持模块功能扩展点的扩展。
 
 ## Guice SPI设计
-  Gucie提供SPI，主要是用来开发工具、扩展或插件的。Guice提供了以下几个核心抽象，理解这些抽象非常重要
+  Gucie提供SPI，主要是用来开发工具、扩展或插件的。Guice提供了以下几个核心抽象，理解这些抽象非常重要  
+  
     抽象 | 说明
   :--|:--  
   Key | Key由类型Type和可选的绑定注解（binding annotation）来定义，唯一标识一个绑定binding 
