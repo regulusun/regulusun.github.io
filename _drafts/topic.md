@@ -11,3 +11,5 @@
 + monadic java
 + 无责任预测一下技术的未来
 + 拥抱google guava 拥抱优雅
++ AKKA vs Rxjava
++ 玄难所说的”能力平台”应该是这样的
