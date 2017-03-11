@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "阅读与思考S01E01"
+title: "PW‘s Reading S01E01：Long Names Are Long"
 categories: readAndThink
 ---
 
