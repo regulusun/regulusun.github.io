@@ -4,10 +4,6 @@ title: "PW‘s Reading S01E01：Long Names Are Long"
 categories: readAndThink
 ---
 
-
-
-## 阅读与思考S01E01
-
 ### 1. [设计SSD友好的应用](http://www.infoq.com/cn/articles/design-ssd-friendly-application)
 
 SSD的一个**存储单元**上最多只能进行10万次写操作，难道SSD寿命会很短？当然不是，SSD内部用**垃圾块收集**来保证后续写操作能够快速分配到可用的块，以及**损耗均衡**的机制来平衡每个块的擦除次数。
