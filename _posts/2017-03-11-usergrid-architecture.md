@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "usergrid架构设计"
+title: "Usergrid架构设计"
 categories: arch
 ---
 
@@ -27,8 +27,7 @@ Usergrid是一个BaaS系统，后端即服务，旨在为移动和Web应用提�
 ![ug-high-arch](http://regulusun.github.io/images/ug-high-arch.png)
 
 + **Access Layer**  
-  接入层，囊括了各种接入方式，如RESTful API，HSF，MTOP，当然也将提供iOS/Android等SDK，无线时代，Usergrid一切以无线为优先；  
-  HSF/MTOP不提供应用管理，应用管理由RESTful API提供
+  接入层，囊括了各种接入方式，如RESTful API，当然也将提供iOS/Android等SDK，无线时代，Usergrid一切以无线为优先；  
 + **Service Layer**  
   服务层，主要功能包括服务解析，服务定位，服务处理等，同时也提供了服务扩展的能力，你可以按照Usergrid的约定实现自己的服务，让大家都可以使用你提供的服务；假如现在平台没有文件上下传功能，然后你按照约定提供一个AssertService，大家都可以用你的文件上下传功能了，这样，平台的能力就越来越强大了。
 + **Persistence Layer**  
@@ -40,7 +39,7 @@ Usergrid是一个BaaS系统，后端即服务，旨在为移动和Web应用提�
 
 #### RESTful API
 RESTful API对关系的描述非常人性，贴近我们的自然语言，比如我喜欢的日记列表，`/users/me/like/diaries`;  
-我们采用[Jersey](https://jersey.java.net/)作为我们的[RESTful](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)框架，因其轻量与SubResource Locator；RESTful API提供了HSF API所提供的，另外还提供了管理层面的接口，portal调用这些接口来达到组织、应用、角色、权限、用户等的管理工作，明显地，这些操作不能随便进行，需要相应的授权，比如角色（是否是系统管理员），[OAUTH2](http://oauth.net/2/)，客户端证书等； 
+我们采用[Jersey](https://jersey.java.net/)作为我们的[RESTful](http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm)框架，因其轻量与SubResource Locator；另外还提供了管理层面的接口，portal调用这些接口来达到组织、应用、角色、权限、用户等的管理工作，明显地，这些操作不能随便进行，需要相应的授权，比如角色（是否是系统管理员），[OAUTH2](http://oauth.net/2/)，客户端证书等； 
  
 此外，除了对基本对象的管理之外，还提供了一些后门，如索引重建，bootstrap（初始化管理应用的应用）等；    
 有些Resource，比如上面说的后门，可能需要应用级权限，或组织级权限，或管理员权限，又或系统超级管理员权限，我们定义了与之对应的4个Annotation，然后通过实现`com.sun.jersey.spi.container.ResourceFilter`来实现资源的过滤。  
