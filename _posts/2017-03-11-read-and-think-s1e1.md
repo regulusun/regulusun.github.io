@@ -40,7 +40,7 @@ SSD的一个**存储单元**上最多只能进行10万次写操作，难道SSD�
 
 最近，我也在做大团队的代码质量提升方面的工作，这篇文章对我帮助很大，作者的一些原则完全可以借过来实施。赞作者！！！
 
-
+参考资料：[为什么我们辛苦写出的代码却难以阅读？](https://mp.weixin.qq.com/s?__biz=MzA5Nzc4OTA1Mw==&mid=2659599032&idx=1&sn=c18f2cd166cc52499c2d8e0416eaa7b6&chksm=8be997aabc9e1ebc403449de0d5ed2eff1f588ac67935dac5ab4bd2e9537ba0dc149c3acdb9a#rd)
 
 ### 5. [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
 
