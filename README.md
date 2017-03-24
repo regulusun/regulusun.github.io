@@ -1,4 +1,4 @@
-# [PaulWalker jekyll blog](http://regulusun.github.io/)
+# [PaulWalker's Blog](http://regulusun.github.io/)
 
 ## series
 
