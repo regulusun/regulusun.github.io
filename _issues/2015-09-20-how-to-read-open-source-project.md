@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "PaulWalker's Blog"
-categories: post 
+title: "如何阅读开源项目的源代码"
+categories: experience 
 ---
 > 阅读优秀开源项目的源码对于码农来讲，是一个提升自己的绝好途径；在阿里，牛人备出，他们在这方面肯定很有经验，不过我在ATA上居然没搜索到分享如何阅读源码的文章；因为本人阅读源码真的不多，所以想抛砖引玉一下！
 
