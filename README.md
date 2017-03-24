@@ -1,5 +1,6 @@
-Yet another jekyll blog.
+# [PaulWalker jekyll blog](http://regulusun.github.io/)
 
-I style this blog as simple as possible so that I can focus on writing.
+## series
 
-
++ Micro-Thesis Per Month
++ PW's Reading
