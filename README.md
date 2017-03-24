@@ -2,5 +2,5 @@
 
 ## series
 
-+ Micro-Thesis Per Month
++ Micro-thesis per Month
 + PW's Reading
