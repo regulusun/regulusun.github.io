@@ -4,17 +4,22 @@ title: PaulWalker - a server-side java developer
 ---
 <div class="sep20"></div>
 <div id="home">
+  <!--
   <h2 class="margin_bottom_0"><a class="jz_color" href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
   <span class="published_date">on {{ site.posts.first.date | date: '%b %d, %Y' }} </span>
   <p> {{ site.posts.first.excerpt | strip_html | truncate:200 }} </p>
   <a class="jz_btn" href="{{ site.posts.first.url }}">read more</a>
+  -->
 
   <div class="sep20"></div>
 
-  <h2 class="jz_color">All Blog Posts</h2>
+  <!-- <h2 class="jz_color">All Blog Posts</h2>  -->
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date: "%F" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><p>{{ post.content }}</p></li>
+      <li>
+        <span>{{ post.date | date: "%F" }}</span> &raquo; <h2 class="jz_color">{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+      </li>
     {% endfor %}
   </ul>
 </div>
