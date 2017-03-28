@@ -15,8 +15,8 @@ categories: post
 ## Domain Drive Design
 - [DDD学习笔记](https://github.com/regulusun/regulusun.github.io/issues/8)
 
-## Study Note
-- [Guice学习笔记](https://github.com/regulusun/regulusun.github.io/issues/6)
+## Big Data
+
 
 ## Analyzing Architecture  
 - [Usergrid架构设计](https://github.com/regulusun/regulusun.github.io/issues/1)
@@ -25,3 +25,4 @@ categories: post
 - [实现分布式锁](https://github.com/regulusun/regulusun.github.io/issues/5)
 - [如何阅读开源项目的源代码](https://github.com/regulusun/regulusun.github.io/issues/4)
 - [从项目命名看业务架构发展](https://github.com/regulusun/regulusun.github.io/issues/3)
+- [Guice学习笔记](https://github.com/regulusun/regulusun.github.io/issues/6)
