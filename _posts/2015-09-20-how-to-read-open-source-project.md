@@ -10,6 +10,8 @@ categories: post
 
 如果想提高效率，你就一定要遵循以下准则：首先，你必须充分利用每一类型的时间；其次，你得尽量让时间变成优质时间。
 
+                                                                                                         -- Aaron Swartz
+
 ## Micro-thesis per Month
 - [Understand NIO](https://github.com/regulusun/regulusun.github.io/issues/7)
 
