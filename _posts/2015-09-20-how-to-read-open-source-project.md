@@ -12,7 +12,7 @@ categories: post
 
 
 ## Java Basis
--[如何排查perm区频繁GC](https://github.com/regulusun/regulusun.github.io/issues/15)
+- [如何排查perm区频繁GC](https://github.com/regulusun/regulusun.github.io/issues/15)
 
 ## Micro-thesis per Month
 - [Understand NIO](https://github.com/regulusun/regulusun.github.io/issues/7)
