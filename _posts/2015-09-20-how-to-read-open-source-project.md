@@ -14,6 +14,9 @@ categories: post
 ## Java Basis
 - [如何排查perm区频繁GC](https://github.com/regulusun/regulusun.github.io/issues/15)
 
+## Modular
+> Modular design, or "modularity in design", is a design approach that subdivides a system into smaller parts called modules or skids, that can be independently created and then used in different systems. A modular system can be characterized by functional partitioning into discrete scalable, reusable modules; rigorous use of well-defined modular interfaces; and making use of industry standards for interfaces.
+
 ## Microthesis per Month
 - [Understand NIO](https://github.com/regulusun/regulusun.github.io/issues/7)
 
