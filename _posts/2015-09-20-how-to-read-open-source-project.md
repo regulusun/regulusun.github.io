@@ -23,7 +23,7 @@ categories: post
 
 ## PW's Reading
 - [PW‘s Reading S01E01：Long Names Are Long](https://github.com/regulusun/regulusun.github.io/issues/2)
-- [PW's Reading S02E01:Over-Complicated](https://github.com/regulusun/regulusun.github.io/issues/36)
+- [PW's Reading S02E01：Over-Complicated](https://github.com/regulusun/regulusun.github.io/issues/36)
 
 ## Domain Drive Design
 - [DDD学习笔记](https://github.com/regulusun/regulusun.github.io/issues/8)
