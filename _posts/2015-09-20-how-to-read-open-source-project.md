@@ -20,6 +20,7 @@ categories: post
 
 ## Microthesis per Month
 - [Understand NIO](https://github.com/regulusun/regulusun.github.io/issues/7)
+- [不确定性研究（待完善）](https://github.com/regulusun/regulusun.github.io/issues/39)
 
 ## PW's Reading
 - [PW‘s Reading S01E01：Long Names Are Long](https://github.com/regulusun/regulusun.github.io/issues/2)
