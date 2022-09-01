@@ -11,12 +11,9 @@ categories: post
 > 如果想提高效率，你就一定要遵循以下准则：首先，你必须充分利用每一类型的时间；其次，你得尽量让时间变成优质时间。         -- Aaron Swartz             
 
 
-## Java Basis
+## Basis
 - [如何排查perm区频繁GC](https://github.com/regulusun/regulusun.github.io/issues/15)
 - [如何进行一场java电话面试](https://github.com/regulusun/regulusun.github.io/issues/9)
-
-## Modular
-> Modular design, or "modularity in design", is a design approach that subdivides a system into smaller parts called modules or skids, that can be independently created and then used in different systems. A modular system can be characterized by functional partitioning into discrete scalable, reusable modules; rigorous use of well-defined modular interfaces; and making use of industry standards for interfaces.
 
 ## Microthesis per Month
 - [Understand NIO](https://github.com/regulusun/regulusun.github.io/issues/7)
@@ -26,15 +23,12 @@ categories: post
 - [PW‘s Reading S01E01：Long Names Are Long](https://github.com/regulusun/regulusun.github.io/issues/2)
 - [PW's Reading S02E01：Over-Complicated](https://github.com/regulusun/regulusun.github.io/issues/36)
 
-## Domain Drive Design
-- [DDD学习笔记](https://github.com/regulusun/regulusun.github.io/issues/8)
-
 ## Data Science
 > 在概率论，数据处理、分析、统计，机器学习等各方面，我都还没有入门，但我相信这是一个方向，我必须入门，也终将入门！
 
-
-## Analyzing Architecture  
+## Architecture  
 - [Usergrid架构设计](https://github.com/regulusun/regulusun.github.io/issues/1)
+- [DDD学习笔记](https://github.com/regulusun/regulusun.github.io/issues/8)
 
 ## Others
 - [实现分布式锁](https://github.com/regulusun/regulusun.github.io/issues/5)
