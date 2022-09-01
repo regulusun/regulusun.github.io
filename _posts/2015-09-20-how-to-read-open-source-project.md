@@ -35,10 +35,12 @@ categories: post
 - [DDD学习笔记](https://github.com/regulusun/regulusun.github.io/issues/8)
 - [架构师的基本素质与能力模型（进行中）](https://github.com/regulusun/regulusun.github.io/issues/60)
 - [我的权衡工具箱（进行中）](https://github.com/regulusun/regulusun.github.io/issues/58)
+- [完美的中台（进行中）](https://github.com/regulusun/regulusun.github.io/issues/50)
 - [谈谈组装式企业（构思中）](https://github.com/regulusun/regulusun.github.io/issues/62)
 - [规划微服务的一些基本原则（TODO）](https://github.com/regulusun/regulusun.github.io/issues/55)
 - [抽象大比拼（TODO）](https://github.com/regulusun/regulusun.github.io/issues/63)
 - [是时候谈谈云原生了（构思中）](https://github.com/regulusun/regulusun.github.io/issues/54)
+
 
 ## Others
 - [实现分布式锁](https://github.com/regulusun/regulusun.github.io/issues/5)
