@@ -27,6 +27,7 @@ categories: post
 
 ## Data Science
 > 在概率论，数据处理、分析、统计，机器学习等各方面，我都还没有入门，但我相信这是一个方向，我必须入门，也终将入门！
+
 - [谈谈数字化转型（进行中）](https://github.com/regulusun/regulusun.github.io/issues/51)
 - [深入浅出数据中台（构思中）](https://github.com/regulusun/regulusun.github.io/issues/53)
 
