@@ -38,6 +38,7 @@ categories: post
 - [谈谈组装式企业（构思中）](https://github.com/regulusun/regulusun.github.io/issues/62)
 - [规划微服务的一些基本原则（TODO）](https://github.com/regulusun/regulusun.github.io/issues/55)
 - [抽象大比拼（TODO）](https://github.com/regulusun/regulusun.github.io/issues/63)
+- [是时候谈谈云原生了（构思中）](https://github.com/regulusun/regulusun.github.io/issues/54)
 
 ## Others
 - [实现分布式锁](https://github.com/regulusun/regulusun.github.io/issues/5)
