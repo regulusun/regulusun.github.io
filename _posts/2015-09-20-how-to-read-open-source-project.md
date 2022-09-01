@@ -23,7 +23,7 @@ categories: post
 ## PW's Reading
 - [PW‘s Reading S01E01：Long Names Are Long](https://github.com/regulusun/regulusun.github.io/issues/2)
 - [PW's Reading S02E01：Over-Complicated](https://github.com/regulusun/regulusun.github.io/issues/36)
-- [PW's Reading S02E02:高效能人士的七个习惯（TODO）](https://github.com/regulusun/regulusun.github.io/issues/57)
+- [PW's Reading S02E02：高效能人士的七个习惯（TODO）](https://github.com/regulusun/regulusun.github.io/issues/57)
 
 ## Data Science
 > 在概率论，数据处理、分析、统计，机器学习等各方面，我都还没有入门，但我相信这是一个方向，我必须入门，也终将入门！
