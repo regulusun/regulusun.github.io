@@ -14,6 +14,7 @@ categories: post
 ## Basis
 - [如何排查perm区频繁GC](https://github.com/regulusun/regulusun.github.io/issues/15)
 - [如何进行一场java电话面试](https://github.com/regulusun/regulusun.github.io/issues/9)
+- [分布式系统基础（进行中）](https://github.com/regulusun/regulusun.github.io/issues/59)
 
 ## Microthesis per Month
 - [Understand NIO](https://github.com/regulusun/regulusun.github.io/issues/7)
@@ -22,13 +23,20 @@ categories: post
 ## PW's Reading
 - [PW‘s Reading S01E01：Long Names Are Long](https://github.com/regulusun/regulusun.github.io/issues/2)
 - [PW's Reading S02E01：Over-Complicated](https://github.com/regulusun/regulusun.github.io/issues/36)
+- [PW's Reading S02E02:高效能人士的七个习惯（TODO）](https://github.com/regulusun/regulusun.github.io/issues/57)
 
 ## Data Science
 > 在概率论，数据处理、分析、统计，机器学习等各方面，我都还没有入门，但我相信这是一个方向，我必须入门，也终将入门！
+- [谈谈数字化转型（进行中）](https://github.com/regulusun/regulusun.github.io/issues/51)
+- [深入浅出数据中台（构思中）](https://github.com/regulusun/regulusun.github.io/issues/53)
 
 ## Architecture  
 - [Usergrid架构设计](https://github.com/regulusun/regulusun.github.io/issues/1)
 - [DDD学习笔记](https://github.com/regulusun/regulusun.github.io/issues/8)
+- [架构师的基本素质与能力模型（进行中）](https://github.com/regulusun/regulusun.github.io/issues/60)
+- [我的权衡工具箱（进行中）](https://github.com/regulusun/regulusun.github.io/issues/58)
+- [谈谈组装式企业（构思中）](https://github.com/regulusun/regulusun.github.io/issues/62)
+- [规划微服务的一些基本原则（TODO）](https://github.com/regulusun/regulusun.github.io/issues/55)
 
 ## Others
 - [实现分布式锁](https://github.com/regulusun/regulusun.github.io/issues/5)
